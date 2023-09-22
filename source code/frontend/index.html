@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
+
+    <!-- ADD YOUR STYLESHEETS HERE -->
+    <link rel="stylesheet" type="text/css" href="./css/panel_buttons.css">
+    <link rel="stylesheet" type="text/css" href="./css/sweetalert2.css">
+    <link rel="stylesheet" type="text/css" href="./css/global_styling.css">
+
+    <!-- ALL THE PLUGINS YOU INCLUDE -->
+    <script src="./scripts/imports/jquery-3.3.1.js"></script>
+    <script src="./scripts/imports/kioskboard-aio-2.3.0.min.js"></script>
+    <script src="./scripts/imports/sweetalert2.js"></script>
+
+    <!-- YOUR CUSTOM SCRIPTS -->
+
+    <!-- MY PAGE CONFIGERATIONS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Remote Drilling</title>
+    <link rel="icon" href="images/MDLogo.png" type="image/x-icon">
+  </head>
+  <body>
+    <br>
+    <table>
+      <tr>
+        <td>
+          <table>
+            <tr>
+              <td>
+                <table>
+                  <tr>
+                    <td>
+                      <font size="4" class="basic_label">
+                        <b id="hitbox">Remote Drilling</b>
+                      </font><br><br>
+                      <input type="password" id="B-00" class="passwf" placeholder="Provide Key to Unlock"><br><br>
+                      <a id="B-01" class="not-pressed-basic">
+                        <font size="4">
+                          <b>Unlock</b>
+                        </font>
+                        <br><br>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a id="B-02" class="not-pressed-basic">
+                        <font size="4">
+                          <b>Lock</b>
+                        </font>
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td>
+                <a id="B-03" class="unlit-second">
+                  <font size="4">
+                    <b>2nd</b>
+                  </font>
+                </a>
+              </td>
+              <td>
+                <table>
+                  <tr>
+                    <td>
+                      <a id="B-06" class="not-pressed-basic">
+                        RF
+                      </a>
+                      <br><br>
+                      <br><br>
+                    </td>
+                    <td>
+                      <a id="B-08" class="not-pressed-basic">
+                        MU
+                      </a>
+                      <br><br>
+                      <br><br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a id="B-07" class="not-pressed-basic">
+                        RR
+                      </a>
+                    </td>
+                    <td>
+                      <a id="B-09" class="not-pressed-basic">
+                        BO
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+        <td>
+          <div class="emergency-div">
+            <a id="B-05" class="unlit-emergency">
+              <font size="4">
+                <b>E-Stop</b>
+              </font>
+            </a>
+          </div>
+        </td>
+        <td>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+        <td>
+          <table>
+            <tr>
+              <td>
+                <a id="B-04" class="unlit-second">
+                  <font size="4">
+                    <b>2nd</b>
+                  </font>
+                </a>
+              </td>
+              <td>
+                <table>
+                  <tr>
+                    <td>
+                      <a id="B-10" class="not-pressed-basic">
+                        ON
+                      </a>
+                      <br><br>
+                    </td>
+                    <td>
+                      <a id="B-49" class="Exit">
+                        Exit/Reload
+                      </a>
+                      <br><br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a id="B-11" class="not-pressed-basic">
+                        OFF
+                      </a>
+                    </td>
+                    <td>
+                      <a id="B-50" class="Refresh">
+                        Minimize
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr></tr>
+      <tr>
+        <td>
+          <table>
+            <tr>
+              <td>
+                <font size="4" class="basic_label">
+                  <b>Hydraulics:</b>
+                </font><br>
+              </td>
+              <td>
+                <br><br>
+                <a id="B-12" class="unlit-button-green">
+                  START
+                </a>
+                <br><br>
+                <br><br>
+              </td>
+              <td>
+                <br><br>
+                <a id="B-13" class="unlit-button-red">
+                  STOP
+                </a>
+                <br><br>
+                <br><br>
+              </td>
+              <td>
+                <br><br>
+                <a id="B-14" class="unlit-button-green">
+                  START
+                </a>
+                <br><br>
+                <br><br>
+              </td>
+              <td>
+                <br><br>
+                <a id="B-15" class="unlit-button-green">
+                  PILOT
+                </a>
+                <br><br>
+                <br><br>
+              </td>
+              <td>
+                <br><br>
+                <a id="B-16" class="unlit-button-green">
+                  REAM
+                </a>
+                <br><br>
+                <br><br>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <font size="4" class="basic_label">
+                  <b>Lube:</b>
+                </font><br>
+                <br><br>
+                <br><br>
+              </td>
+              <td>
+                <a id="B-17" class="unlit-button-green">
+                  START
+                </a>
+                <br><br>
+                <br><br>
+              </td>
+              <td>
+                <a id="B-18" class="unlit-button-red">
+                  STOP
+                </a>
+                <br><br>
+                <br><br>
+              </td>
+              <td>
+                <a id="B-19" class="unlit-button-red">
+                  STOP
+                </a>
+                <br><br>
+                <br><br>
+              </td>
+              <td>
+                <a id="B-20" class="unlit-button-green">
+                  PULLING
+                </a>
+                <br><br>
+                <br><br>
+              </td>
+              <td>
+                <a id="B-21" class="unlit-button-green">
+                  LOWERING
+                </a>
+                <br><br>
+                <br><br>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <font size="4" class="basic_label">
+                  <b>Gear:</b>
+                </font><br>
+                <br><br>
+              </td>
+              <td>
+                <a id="B-22" class="unlit-button-green">
+                  LOW
+                </a>
+                <br><br><br>
+              </td>
+              <td>
+                <a id="B-23" class="unlit-button-green">
+                  HIGH
+                </a>
+                <br><br><br>
+              </td>
+              <td>
+                <a id="B-24" class="unlit-button-green">
+                  MANUAL
+                </a>
+                <br><br><br>
+              </td>
+              <td>
+                <a id="B-25" class="unlit-button-green">
+                  S/AUTO
+                </a>
+                <br><br><br>
+              </td>
+              <td>
+                <a id="B-26" class="unlit-button-green">
+                  AUTO
+                </a>
+                <br><br><br>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+        <td>
+          <table>
+            <tr>
+              <td>
+                <font size="4" class="basic_label">
+                  <b>Thrust</b>
+                </font><br><br>
+                <a id="B-27" class="unlit-square">
+                  &#8679;
+                </a>
+                <br><br>
+              </td>
+              <td>
+                <font size="4" class="basic_label">
+                  <b>RPM</b>
+                </font><br><br>
+                <a id="B-29" class="unlit-square">
+                  &#8679;
+                </a>
+                <br><br>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a id="B-28" class="unlit-square">
+                  &#8681;
+                </a>
+              </td>
+              <td>
+                <a id="B-30" class="unlit-square">
+                  &#8681;
+                </a>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+        <td>
+          <table>
+            <tr>
+              <td>
+                <a id="B-31" class="unlit-button-orange">
+                  MANUAL
+                </a>
+                <br><br>
+              </td>
+              <td>
+                <a id="B-32" class="unlit-button-orange">
+                  AUTO
+                </a>
+                <br><br>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <font size="4" class="basic_label">
+                  <b>R/L</b>
+                </font><br><br>
+                <a id="B-33" class="unlit-button-orange">
+                  CLAMP
+                </a>
+                <br><br>
+              </td>
+              <td>
+                <font size="4" class="basic_label">
+                  <b>R/L</b>
+                </font><br><br>
+                <a id="B-34" class="unlit-button-orange">
+                  IN
+                </a>
+                <br><br>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <font size="4" class="basic_label">
+                  <b>R/L</b>
+                </font><br><br>
+                <a id="B-35" class="unlit-button-orange">
+                  UNCLAMP
+                </a>
+                <br><br>
+              </td>
+              <td>
+                <font size="4" class="basic_label">
+                  <b>R/L</b>
+                </font><br><br>
+                <a id="B-36" class="unlit-button-orange">
+                  OUT
+                </a>
+                <br><br>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr></tr>
+      <tr>
+        <td>
+          <table>
+            <tr>
+              <td>
+                <font size="4" class="basic_label">
+                  <b>Fast</b>
+                </font><br><br>
+                <a id="B-37" class="unlit-square">
+                  &#8679;
+                </a>
+                <br><br>
+              </td>
+              <td>
+                <font size="4" class="basic_label">
+                  <b>Slow</b>
+                </font><br><br>
+                <a id="B-39" class="unlit-latch-square">
+                  &#8679;
+                </a>
+                <br><br>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a id="B-38" class="unlit-square">
+                  &#8681;
+                </a>
+                <br><br>
+              </td>
+              <td>
+                <a id="B-40" class="unlit-latch-square">
+                  &#8681;
+                </a>
+                <br><br>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+        <td>
+          <table>
+            <tr>
+              <td>
+                <font size="4" class="basic_label">
+                  <b>Top Spanner</b>
+                </font><br><br>
+                <a id="B-41" class="unlit-square">
+                  &#8679;
+                </a>
+                <br><br>
+              </td>
+              <td>
+                <font size="4" class="basic_label">
+                  <b>Bottom Spanner</b>
+                </font><br><br>
+                <a id="B-43" class="unlit-square">
+                  &#8679;
+                </a>
+                <br><br>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a id="B-42" class="unlit-square">
+                  &#8681;
+                </a>
+                <br><br>
+              </td>
+              <td>
+                <a id="B-44" class="unlit-square">
+                  &#8681;
+                </a>
+                <br><br>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+        <td>
+          <table>
+            <tr>
+              <td>
+                <font size="4" class="basic_label">
+                  <b>Rod</b>
+                </font><br><br>
+                <a id="B-45" class="unlit-square">
+                  &#8679;
+                </a>
+                <br><br>
+              </td>
+              <td>
+                <font size="4" class="basic_label">
+                  <b>Extra</b>
+                </font><br><br>
+                <a id="B-47" class="unlit-square">
+                  A
+                </a>
+                <br><br>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a id="B-46" class="unlit-square">
+                  &#8681;
+                </a>
+                <br><br>
+              </td>
+              <td>
+                <a id="B-48" class="unlit-square">
+                  B
+                </a>
+                <br><br>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+  <script src="./scripts/index_event_listeners_touch.js"></script>
+  <script src="./scripts/index_event_listeners_mouse.js"></script>
+</html>

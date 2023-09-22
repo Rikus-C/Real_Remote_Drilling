@@ -1,0 +1,578 @@
+{
+  "B-01": {
+    "Comment": "Remote Drilling Unlock",
+    "Drive_IO_State_Location": [
+      1, 1
+    ],
+    "Drive_IO_Possible_Location": [],
+    "Skin": 0,
+    "CSS_Pressed": "pressed-basic-ON",
+    "CSS_Released": "not-pressed-basic-ON",
+    "CSS_Output": "not-pressed-basic-ON"
+  },
+  "B-02": {
+    "Comment": "Remote Drilling Lock",
+    "Drive_IO_State_Location": [
+      1, 2
+    ],
+    "Drive_IO_Possible_Location": [],
+    "Skin": 0,
+    "CSS_Pressed": "pressed-basic-OFF",
+    "CSS_Released": "not-pressed-basic-OFF",
+    "CSS_Output": "not-pressed-basic-OFF"
+  },
+  "B-03": {
+    "Comment": "Left Second Button",
+    "Drive_IO_State_Location": [
+      2, 1
+    ],
+    "Drive_IO_Possible_Location": [],
+    "Skin": 0,
+    "CSS_Pressed": "blue-lit-second",
+    "CSS_Released": "unlit-second",
+    "CSS_Output": "unlit-second"
+  },
+  "B-04": {
+    "Comment": "Right Second Button",
+    "Drive_IO_State_Location": [
+      2, 15
+    ],
+    "Drive_IO_Possible_Location": [],
+    "Skin": 0,
+    "CSS_Pressed": "blue-lit-second",
+    "CSS_Released": "unlit-second",
+    "CSS_Output": "unlit-second"
+  },
+  "B-05": {
+    "Comment": "E-Stop Button",
+    "Drive_IO_State_Location": [
+      1, 0
+    ],
+    "Drive_IO_Possible_Location": [],
+    "Skin": 0,
+    "CSS_Pressed": "unlit-emergency",
+    "CSS_Released": "yellow-lit-emergency",
+    "CSS_Output": "unlit-emergency"
+  },
+  "B-06": {
+    "Comment": "RF Button",
+    "Drive_IO_State_Location": [
+      1, 12
+    ],
+    "Drive_IO_Possible_Location": [],
+    "Skin": 0,
+    "CSS_Pressed": "pressed-basic",
+    "CSS_Released": "not-pressed-basic",
+    "CSS_Output": "not-pressed-basic"
+  },
+  "B-07": {
+    "Comment": "RR Button",
+    "Drive_IO_State_Location": [
+      1, 13
+    ],
+    "Drive_IO_Possible_Location": [],
+    "Skin": 0,
+    "CSS_Pressed": "pressed-basic",
+    "CSS_Released": "not-pressed-basic",
+    "CSS_Output": "not-pressed-basic"
+  },
+  "B-08": {
+    "Comment": "MU Button",
+    "Drive_IO_State_Location": [
+      1, 11
+    ],
+    "Drive_IO_Possible_Location": [],
+    "Skin": 0,
+    "CSS_Pressed": "pressed-basic",
+    "CSS_Released": "not-pressed-basic",
+    "CSS_Output": "not-pressed-basic"
+  },
+  "B-09": {
+    "Comment": "BO Button",
+    "Drive_IO_State_Location": [
+      1, 14
+    ],
+    "Drive_IO_Possible_Location": [],
+    "Skin": 0,
+    "CSS_Pressed": "pressed-basic",
+    "CSS_Released": "not-pressed-basic",
+    "CSS_Output": "not-pressed-basic"
+  },
+  "B-10": {
+    "Comment": "Rod Loader ON",
+    "Drive_IO_State_Location": [
+      2, 11
+    ],
+    "Drive_IO_Possible_Location": [
+      0, 15
+    ],
+    "Skin": 0,
+    "CSS_Pressed": "pressed-basic-ON",
+    "CSS_Released": "not-pressed-basic-ON",
+    "CSS_Output": "not-pressed-basic-ON"
+  },
+  "B-11": {
+    "Comment": "Rod Loader OFF",
+    "Drive_IO_State_Location": [
+      2, 12
+    ],
+    "Drive_IO_Possible_Location": [],
+    "Skin": 0,
+    "CSS_Pressed": "pressed-basic-OFF",
+    "CSS_Released": "not-pressed-basic-OFF",
+    "CSS_Output": "not-pressed-basic-OFF"
+  },
+  "B-12": {
+    "Comment": "Hydraulics Start Button",
+    "Drive_IO_State_Location": [
+      1, 3
+    ],
+    "Drive_IO_Possible_Location": [
+      0, 0
+    ],
+    "Skin": 0,
+    "CSS_Pressed": "green-lit-button-green",
+    "CSS_Released": "unlit-button-green",
+    "CSS_Output": "white-lit-button-green"
+  },
+  "B-13": {
+    "Comment": "Hydraulics Stop Button",
+    "Drive_IO_State_Location": [
+      1, 4
+    ],
+    "Drive_IO_Possible_Location": [
+      0, 1
+    ],
+    "Skin": 0,
+    "CSS_Pressed": "unlit-button-red",
+    "CSS_Released": "red-lit-button-red",
+    "CSS_Output": "white-lit-button-red"
+  },
+  "B-14": {
+    "Comment": "Drive Start Button",
+    "Drive_IO_State_Location": [
+      1, 15
+    ],
+    "Drive_IO_Possible_Location": [
+      0, 6
+    ],
+    "Skin": 0,
+    "CSS_Pressed": "green-lit-button-green",
+    "CSS_Released": "unlit-button-green",
+    "CSS_Output": "white-lit-button-green"
+  },
+  "B-15": {
+    "Comment": "Pilot Button",
+    "Drive_IO_State_Location": [
+      2, 2
+    ],
+    "Drive_IO_Possible_Location": [
+      0, 8
+    ],
+    "Skin": 0,
+    "CSS_Pressed": "green-lit-button-green",
+    "CSS_Released": "unlit-button-green",
+    "CSS_Output": "white-lit-button-green"
+  },
+  "B-16": {
+    "Comment": "Ream Button",
+    "Drive_IO_State_Location": [
+      2, 3
+    ],
+    "Drive_IO_Possible_Location": [
+      0, 9
+    ],
+    "Skin": 0,
+    "CSS_Pressed": "green-lit-button-green",
+    "CSS_Released": "unlit-button-green",
+    "CSS_Output": "white-lit-button-green"
+  },
+  "B-17": {
+    "Comment": "Lube Start Button",
+    "Drive_IO_State_Location": [
+      1, 5
+    ],
+    "Drive_IO_Possible_Location": [
+      0, 2
+    ],
+    "Skin": 0,
+    "CSS_Pressed": "green-lit-button-green",
+    "CSS_Released": "unlit-button-green",
+    "CSS_Output": "white-lit-button-green"
+  },
+  "B-18": {
+    "Comment": "Lube Stop Button",
+    "Drive_IO_State_Location": [
+      1, 6
+    ],
+    "Drive_IO_Possible_Location": [
+      0, 3
+    ],
+    "Skin": 0,
+    "CSS_Pressed": "unlit-button-red",
+    "CSS_Released": "red-lit-button-red",
+    "CSS_Output": "white-lit-button-red"
+  },
+  "B-19": {
+    "Comment": "Drive Stop Button",
+    "Drive_IO_State_Location": [
+      2, 0
+    ],
+    "Drive_IO_Possible_Location": [
+      0, 7
+    ],
+    "Skin": 0,
+    "CSS_Pressed": "unlit-button-red",
+    "CSS_Released": "red-lit-button-red",
+    "CSS_Output": "white-lit-button-red"
+  },
+  "B-20": {
+    "Comment": "Pulling Button",
+    "Drive_IO_State_Location": [
+      2, 4
+    ],
+    "Drive_IO_Possible_Location": [
+      0, 10
+    ],
+    "Skin": 0,
+    "CSS_Pressed": "green-lit-button-green",
+    "CSS_Released": "unlit-button-green",
+    "CSS_Output": "white-lit-button-green"
+  },
+  "B-21": {
+    "Comment": "Lowering Button",
+    "Drive_IO_State_Location": [
+      2, 5
+    ],
+    "Drive_IO_Possible_Location": [
+      0, 11
+    ],
+    "Skin": 0,
+    "CSS_Pressed": "green-lit-button-green",
+    "CSS_Released": "unlit-button-green",
+    "CSS_Output": "white-lit-button-green"
+  },
+  "B-22": {
+    "Comment": "Gear Low Button",
+    "Drive_IO_State_Location": [
+      1, 7
+    ],
+    "Drive_IO_Possible_Location": [
+      0, 4
+    ],
+    "Skin": 0,
+    "CSS_Pressed": "green-lit-button-green",
+    "CSS_Released": "unlit-button-green",
+    "CSS_Output": "white-lit-button-green"
+  },
+  "B-23": {
+    "Comment": "Gear High Button",
+    "Drive_IO_State_Location": [
+      1, 8
+    ],
+    "Drive_IO_Possible_Location": [
+      0, 5
+    ],
+    "Skin": 0,
+    "CSS_Pressed": "green-lit-button-green",
+    "CSS_Released": "unlit-button-green",
+    "CSS_Output": "white-lit-button-green"
+  },
+  "B-24": {
+    "Comment": "Manual Mode Button",
+    "Drive_IO_State_Location": [
+      2, 6
+    ],
+    "Drive_IO_Possible_Location": [
+      0, 12
+    ],
+    "Skin": 0,
+    "CSS_Pressed": "green-lit-button-green",
+    "CSS_Released": "unlit-button-green",
+    "CSS_Output": "white-lit-button-green"
+  },
+  "B-25": {
+    "Comment": "Semi-Auto Mode Button",
+    "Drive_IO_State_Location": [
+      2, 8
+    ],
+    "Drive_IO_Possible_Location": [
+      0, 14
+    ],
+    "Skin": 0,
+    "CSS_Pressed": "green-lit-button-green",
+    "CSS_Released": "unlit-button-green",
+    "CSS_Output": "white-lit-button-green"
+  },
+  "B-26": {
+    "Comment": "Auto Mode Button",
+    "Drive_IO_State_Location": [
+      2, 7
+    ],
+    "Drive_IO_Possible_Location": [
+      0, 13
+    ],
+    "Skin": 0,
+    "CSS_Pressed": "green-lit-button-green",
+    "CSS_Released": "unlit-button-green",
+    "CSS_Output": "white-lit-button-green"
+  },
+  "B-27": {
+    "Comment": "Thrust Up Button",
+    "Drive_IO_State_Location": [
+      3, 11
+    ],
+    "Drive_IO_Possible_Location": [],
+    "Skin": 0,
+    "CSS_Pressed": "blue-lit-square",
+    "CSS_Released": "unlit-square",
+    "CSS_Output": "white-lit-square"
+  },
+  "B-28": {
+    "Comment": "Thrust Down Button",
+    "Drive_IO_State_Location": [
+      3, 9
+    ],
+    "Drive_IO_Possible_Location": [],
+    "Skin": 0,
+    "CSS_Pressed": "blue-lit-square",
+    "CSS_Released": "unlit-square",
+    "CSS_Output": "white-lit-square"
+  },
+  "B-29": {
+    "Comment": "RPM Up Button",
+    "Drive_IO_State_Location": [
+      2, 10
+    ],
+    "Drive_IO_Possible_Location": [],
+    "Skin": 0,
+    "CSS_Pressed": "blue-lit-square",
+    "CSS_Released": "unlit-square",
+    "CSS_Output": "white-lit-square"
+  },
+  "B-30": {
+    "Comment": "RPM Down Button",
+    "Drive_IO_State_Location": [
+      2, 9
+    ],
+    "Drive_IO_Possible_Location": [],
+    "Skin": 0,
+    "CSS_Pressed": "blue-lit-square",
+    "CSS_Released": "unlit-square",
+    "CSS_Output": "white-lit-square"
+  },
+  "B-31": {
+    "Comment": "Rod Loader Manual Button",
+    "Drive_IO_State_Location": [
+      2, 13
+    ],
+    "Drive_IO_Possible_Location": [
+      1, 0
+    ],
+    "Skin": 0,
+    "CSS_Pressed": "orange-lit-button-orange",
+    "CSS_Released": "unlit-button-orange",
+    "CSS_Output": "white-lit-button-orange"
+  },
+  "B-32": {
+    "Comment": "Rod Loader Auto Button",
+    "Drive_IO_State_Location": [
+      2, 14
+    ],
+    "Drive_IO_Possible_Location": [
+      1, 1
+    ],
+    "Skin": 0,
+    "CSS_Pressed": "orange-lit-button-orange",
+    "CSS_Released": "unlit-button-orange",
+    "CSS_Output": "white-lit-button-orange"
+  },
+  "B-33": {
+    "Comment": "Rod Loader Clamp Button",
+    "Drive_IO_State_Location": [
+      3, 0
+    ],
+    "Drive_IO_Possible_Location": [
+      1, 2
+    ],
+    "Skin": 0,
+    "CSS_Pressed": "orange-lit-button-orange",
+    "CSS_Released": "unlit-button-orange",
+    "CSS_Output": "white-lit-button-orange"
+  },
+  "B-34": {
+    "Comment": "Rod Loader In Button",
+    "Drive_IO_State_Location": [
+      3, 2
+    ],
+    "Drive_IO_Possible_Location": [
+      1, 4
+    ],
+    "Skin": 0,
+    "CSS_Pressed": "orange-lit-button-orange",
+    "CSS_Released": "unlit-button-orange",
+    "CSS_Output": "white-lit-button-orange"
+  },
+  "B-35": {
+    "Comment": "Rod Loader Unclamp Button",
+    "Drive_IO_State_Location": [
+      3, 1
+    ],
+    "Drive_IO_Possible_Location": [
+      1, 3
+    ],
+    "Skin": 0,
+    "CSS_Pressed": "orange-lit-button-orange",
+    "CSS_Released": "unlit-button-orange",
+    "CSS_Output": "white-lit-button-orange"
+  },
+  "B-36": {
+    "Comment": "Rod Loader Out Button",
+    "Drive_IO_State_Location": [
+      3, 3
+    ],
+    "Drive_IO_Possible_Location": [
+      1, 5
+    ],
+    "Skin": 0,
+    "CSS_Pressed": "orange-lit-button-orange",
+    "CSS_Released": "unlit-button-orange",
+    "CSS_Output": "white-lit-button-orange"
+  },
+  "B-37": {
+    "Comment": "Fast Up Button",
+    "Drive_IO_State_Location": [
+      1, 9
+    ],
+    "Drive_IO_Possible_Location": [],
+    "Skin": 0,
+    "CSS_Pressed": "blue-lit-square",
+    "CSS_Released": "unlit-square",
+    "CSS_Output": "white-lit-square"
+  },
+  "B-38": {
+    "Comment": "Fast Down Button",
+    "Drive_IO_State_Location": [
+      1, 10
+    ],
+    "Drive_IO_Possible_Location": [],
+    "Skin": 0,
+    "CSS_Pressed": "blue-lit-square",
+    "CSS_Released": "unlit-square",
+    "CSS_Output": "white-lit-square"
+  },
+  "B-39": {
+    "Comment": "Slow Up Button",
+    "Drive_IO_State_Location": [
+      3, 8
+    ],
+    "Drive_IO_Possible_Location": [],
+    "Skin": 0,
+    "CSS_Pressed": "red-lit-latch-square",
+    "CSS_Released": "unlit-latch-square",
+    "CSS_Output": "white-lit-latch-square"
+  },
+  "B-40": {
+    "Comment": "Slow Down Button",
+    "Drive_IO_State_Location": [
+      3, 10
+    ],
+    "Drive_IO_Possible_Location": [],
+    "Skin": 0,
+    "CSS_Pressed": "red-lit-latch-square",
+    "CSS_Released": "unlit-latch-square",
+    "CSS_Output": "white-lit-latch-square"
+  },
+  "B-41": {
+    "Comment": "Top Spanner Up Button",
+    "Drive_IO_State_Location": [
+      3, 4
+    ],
+    "Drive_IO_Possible_Location": [],
+    "Skin": 0,
+    "CSS_Pressed": "blue-lit-square",
+    "CSS_Released": "unlit-square",
+    "CSS_Output": "white-lit-square"
+  },
+  "B-42": {
+    "Comment": "Top Spanner Down Button",
+    "Drive_IO_State_Location": [
+      3, 5
+    ],
+    "Drive_IO_Possible_Location": [],
+    "Skin": 0,
+    "CSS_Pressed": "blue-lit-square",
+    "CSS_Released": "unlit-square",
+    "CSS_Output": "white-lit-square"
+  },
+  "B-43": {
+    "Comment": "Bottom Spanner Up Button",
+    "Drive_IO_State_Location": [
+      3, 14
+    ],
+    "Drive_IO_Possible_Location": [],
+    "Skin": 0,
+    "CSS_Pressed": "blue-lit-square",
+    "CSS_Released": "unlit-square",
+    "CSS_Output": "white-lit-square"
+  },
+  "B-44": {
+    "Comment": "Bottom Spanner Down Button",
+    "Drive_IO_State_Location": [
+      3, 15
+    ],
+    "Drive_IO_Possible_Location": [],
+    "Skin": 0,
+    "CSS_Pressed": "blue-lit-square",
+    "CSS_Released": "unlit-square",
+    "CSS_Output": "white-lit-square"
+  },
+  "B-45": {
+    "Comment": "Rod Up Button",
+    "Drive_IO_State_Location": [
+      3, 6
+    ],
+    "Drive_IO_Possible_Location": [],
+    "Skin": 0,
+    "CSS_Pressed": "blue-lit-square",
+    "CSS_Released": "unlit-square",
+    "CSS_Output": "white-lit-square"
+  },
+  "B-46": {
+    "Comment": "Rod Down Button",
+    "Drive_IO_State_Location": [
+      3, 7
+    ],
+    "Drive_IO_Possible_Location": [],
+    "Skin": 0,
+    "CSS_Pressed": "blue-lit-square",
+    "CSS_Released": "unlit-square",
+    "CSS_Output": "white-lit-square"
+  },
+  "B-47": {
+    "Comment": "Spare Button A",
+    "Drive_IO_State_Location": [
+      3, 12
+    ],
+    "Drive_IO_Possible_Location": [
+      1, 6
+    ],
+    "Skin": 0,
+    "CSS_Pressed": "blue-lit-square",
+    "CSS_Released": "unlit-square",
+    "CSS_Output": "white-lit-square"
+  },
+  "B-48": {
+    "Comment": "Spare Button B",
+    "Drive_IO_State_Location": [
+      3, 13
+    ],
+    "Drive_IO_Possible_Location": [
+      1, 7
+    ],
+    "Skin": 0,
+    "CSS_Pressed": "blue-lit-square",
+    "CSS_Released": "unlit-square",
+    "CSS_Output": "white-lit-square"
+  }
+}

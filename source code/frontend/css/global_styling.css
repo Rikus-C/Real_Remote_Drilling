@@ -1,0 +1,24 @@
+html,
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-image: url('./wood_background.jpg');
+    background-repeat: repeat;
+    right: 0;
+    left: 0;
+    top: 0;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-user-select: none;
+    user-select: none;
+    overflow: hidden;
+}
+table {
+    width: 100%;
+}
+th,
+td {
+    border-collapse: collapse;
+    margin: 0%;
+    text-align: center;
+}
