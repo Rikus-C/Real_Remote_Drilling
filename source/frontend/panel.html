@@ -4,9 +4,9 @@
     <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
 
     <!-- ADD YOUR STYLESHEETS HERE -->
-    <link rel="stylesheet" type="text/css" href="./css/panel_buttons.css">
-    <link rel="stylesheet" type="text/css" href="./css/sweetalert2.css">
-    <link rel="stylesheet" type="text/css" href="./css/global_styling.css">
+    <link rel="stylesheet" type="text/css" href="./styling/css/panel_buttons.css">
+    <link rel="stylesheet" type="text/css" href=".styling//css/sweetalert2.css">
+    <link rel="stylesheet" type="text/css" href="./styling/css/global_styling.css">
 
     <!-- ALL THE PLUGINS YOU INCLUDE -->
     <script src="./scripts/imports/jquery-3.3.1.js"></script>
@@ -14,6 +14,13 @@
     <script src="./scripts/imports/sweetalert2.js"></script>
 
     <!-- YOUR CUSTOM SCRIPTS -->
+    <script src="./settings/button_states.js"></script>
+    <script src="./settings/button_styles.js"></script>
+    <script src="./settings/button_types.js"></script>
+    <script src="./settings/general_settings.js"></script>
+    <script src="./settings/buttons_feedback.js"></script>
+    <script src="./scripts/control_panel.js"></script>
+    <script src="./scripts/websocket.js"></script>
 
     <!-- MY PAGE CONFIGERATIONS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -34,7 +41,7 @@
                       <font size="4" class="basic_label">
                         <b id="hitbox">Remote Drilling</b>
                       </font><br><br>
-                      <input type="password" id="B-00" class="passwf" placeholder="Provide Key to Unlock"><br><br>
+                      <input type="xpassword" id="password" class="passwf" placeholder="Provide Key to Unlock"><br><br>
                       <a id="B-01" class="not-pressed-basic">
                         <font size="4">
                           <b>Unlock</b>
@@ -55,7 +62,7 @@
                 </table>
               </td>
               <td>
-                <a id="B-03" class="unlit-second">
+                <a id="B-03" class="second">
                   <font size="4">
                     <b>2nd</b>
                   </font>
@@ -104,7 +111,7 @@
         </td>
         <td>
           <div class="emergency-div">
-            <a id="B-05" class="unlit-emergency">
+            <a id="B-05" class="emergency">
               <font size="4">
                 <b>E-Stop</b>
               </font>
@@ -121,7 +128,7 @@
           <table>
             <tr>
               <td>
-                <a id="B-04" class="unlit-second">
+                <a id="B-04" class="second">
                   <font size="4">
                     <b>2nd</b>
                   </font>
@@ -173,7 +180,7 @@
               </td>
               <td>
                 <br><br>
-                <a id="B-12" class="unlit-button-green">
+                <a id="B-12" class="button-green">
                   START
                 </a>
                 <br><br>
@@ -181,7 +188,7 @@
               </td>
               <td>
                 <br><br>
-                <a id="B-13" class="unlit-button-red">
+                <a id="B-13" class="button-red">
                   STOP
                 </a>
                 <br><br>
@@ -189,7 +196,7 @@
               </td>
               <td>
                 <br><br>
-                <a id="B-14" class="unlit-button-green">
+                <a id="B-14" class="button-green">
                   START
                 </a>
                 <br><br>
@@ -197,7 +204,7 @@
               </td>
               <td>
                 <br><br>
-                <a id="B-15" class="unlit-button-green">
+                <a id="B-15" class="button-green">
                   PILOT
                 </a>
                 <br><br>
@@ -205,7 +212,7 @@
               </td>
               <td>
                 <br><br>
-                <a id="B-16" class="unlit-button-green">
+                <a id="B-16" class="button-green">
                   REAM
                 </a>
                 <br><br>
@@ -221,35 +228,35 @@
                 <br><br>
               </td>
               <td>
-                <a id="B-17" class="unlit-button-green">
+                <a id="B-17" class="button-green">
                   START
                 </a>
                 <br><br>
                 <br><br>
               </td>
               <td>
-                <a id="B-18" class="unlit-button-red">
+                <a id="B-18" class="button-red">
                   STOP
                 </a>
                 <br><br>
                 <br><br>
               </td>
               <td>
-                <a id="B-19" class="unlit-button-red">
+                <a id="B-19" class="button-red">
                   STOP
                 </a>
                 <br><br>
                 <br><br>
               </td>
               <td>
-                <a id="B-20" class="unlit-button-green">
+                <a id="B-20" class="button-green">
                   PULLING
                 </a>
                 <br><br>
                 <br><br>
               </td>
               <td>
-                <a id="B-21" class="unlit-button-green">
+                <a id="B-21" class="button-green">
                   LOWERING
                 </a>
                 <br><br>
@@ -264,31 +271,31 @@
                 <br><br>
               </td>
               <td>
-                <a id="B-22" class="unlit-button-green">
+                <a id="B-22" class="button-green">
                   LOW
                 </a>
                 <br><br><br>
               </td>
               <td>
-                <a id="B-23" class="unlit-button-green">
+                <a id="B-23" class="button-green">
                   HIGH
                 </a>
                 <br><br><br>
               </td>
               <td>
-                <a id="B-24" class="unlit-button-green">
+                <a id="B-24" class="button-green">
                   MANUAL
                 </a>
                 <br><br><br>
               </td>
               <td>
-                <a id="B-25" class="unlit-button-green">
+                <a id="B-25" class="button-green">
                   S/AUTO
                 </a>
                 <br><br><br>
               </td>
               <td>
-                <a id="B-26" class="unlit-button-green">
+                <a id="B-26" class="button-green">
                   AUTO
                 </a>
                 <br><br><br>
@@ -309,7 +316,7 @@
                 <font size="4" class="basic_label">
                   <b>Thrust</b>
                 </font><br><br>
-                <a id="B-27" class="unlit-square">
+                <a id="B-27" class="square-blue">
                   &#8679;
                 </a>
                 <br><br>
@@ -318,7 +325,7 @@
                 <font size="4" class="basic_label">
                   <b>RPM</b>
                 </font><br><br>
-                <a id="B-29" class="unlit-square">
+                <a id="B-29" class="square-blue">
                   &#8679;
                 </a>
                 <br><br>
@@ -326,12 +333,12 @@
             </tr>
             <tr>
               <td>
-                <a id="B-28" class="unlit-square">
+                <a id="B-28" class="square-blue">
                   &#8681;
                 </a>
               </td>
               <td>
-                <a id="B-30" class="unlit-square">
+                <a id="B-30" class="square-blue">
                   &#8681;
                 </a>
               </td>
@@ -348,13 +355,13 @@
           <table>
             <tr>
               <td>
-                <a id="B-31" class="unlit-button-orange">
+                <a id="B-31" class="button-orange">
                   MANUAL
                 </a>
                 <br><br>
               </td>
               <td>
-                <a id="B-32" class="unlit-button-orange">
+                <a id="B-32" class="button-orange">
                   AUTO
                 </a>
                 <br><br>
@@ -365,7 +372,7 @@
                 <font size="4" class="basic_label">
                   <b>R/L</b>
                 </font><br><br>
-                <a id="B-33" class="unlit-button-orange">
+                <a id="B-33" class="button-orange">
                   CLAMP
                 </a>
                 <br><br>
@@ -374,7 +381,7 @@
                 <font size="4" class="basic_label">
                   <b>R/L</b>
                 </font><br><br>
-                <a id="B-34" class="unlit-button-orange">
+                <a id="B-34" class="button-orange">
                   IN
                 </a>
                 <br><br>
@@ -385,7 +392,7 @@
                 <font size="4" class="basic_label">
                   <b>R/L</b>
                 </font><br><br>
-                <a id="B-35" class="unlit-button-orange">
+                <a id="B-35" class="button-orange">
                   UNCLAMP
                 </a>
                 <br><br>
@@ -394,7 +401,7 @@
                 <font size="4" class="basic_label">
                   <b>R/L</b>
                 </font><br><br>
-                <a id="B-36" class="unlit-button-orange">
+                <a id="B-36" class="button-orange">
                   OUT
                 </a>
                 <br><br>
@@ -412,7 +419,7 @@
                 <font size="4" class="basic_label">
                   <b>Fast</b>
                 </font><br><br>
-                <a id="B-37" class="unlit-square">
+                <a id="B-37" class="square-blue">
                   &#8679;
                 </a>
                 <br><br>
@@ -421,7 +428,7 @@
                 <font size="4" class="basic_label">
                   <b>Slow</b>
                 </font><br><br>
-                <a id="B-39" class="unlit-latch-square">
+                <a id="B-39" class="square-red">
                   &#8679;
                 </a>
                 <br><br>
@@ -429,13 +436,13 @@
             </tr>
             <tr>
               <td>
-                <a id="B-38" class="unlit-square">
+                <a id="B-38" class="square-blue">
                   &#8681;
                 </a>
                 <br><br>
               </td>
               <td>
-                <a id="B-40" class="unlit-latch-square">
+                <a id="B-40" class="square-red">
                   &#8681;
                 </a>
                 <br><br>
@@ -456,7 +463,7 @@
                 <font size="4" class="basic_label">
                   <b>Top Spanner</b>
                 </font><br><br>
-                <a id="B-41" class="unlit-square">
+                <a id="B-41" class="square-blue">
                   &#8679;
                 </a>
                 <br><br>
@@ -465,7 +472,7 @@
                 <font size="4" class="basic_label">
                   <b>Bottom Spanner</b>
                 </font><br><br>
-                <a id="B-43" class="unlit-square">
+                <a id="B-43" class="square-blue">
                   &#8679;
                 </a>
                 <br><br>
@@ -473,13 +480,13 @@
             </tr>
             <tr>
               <td>
-                <a id="B-42" class="unlit-square">
+                <a id="B-42" class="square-blue">
                   &#8681;
                 </a>
                 <br><br>
               </td>
               <td>
-                <a id="B-44" class="unlit-square">
+                <a id="B-44" class="square-blue">
                   &#8681;
                 </a>
                 <br><br>
@@ -500,7 +507,7 @@
                 <font size="4" class="basic_label">
                   <b>Rod</b>
                 </font><br><br>
-                <a id="B-45" class="unlit-square">
+                <a id="B-45" class="square-blue">
                   &#8679;
                 </a>
                 <br><br>
@@ -509,7 +516,7 @@
                 <font size="4" class="basic_label">
                   <b>Extra</b>
                 </font><br><br>
-                <a id="B-47" class="unlit-square">
+                <a id="B-47" class="square-blue">
                   A
                 </a>
                 <br><br>
@@ -517,13 +524,13 @@
             </tr>
             <tr>
               <td>
-                <a id="B-46" class="unlit-square">
+                <a id="B-46" class="square-blue">
                   &#8681;
                 </a>
                 <br><br>
               </td>
               <td>
-                <a id="B-48" class="unlit-square">
+                <a id="B-48" class="square-blue">
                   B
                 </a>
                 <br><br>

@@ -1,12 +1,12 @@
 {
-  "name": "Remote_Drilling_V2.0",
-  "version": "1.0.0",
+  "name": "remote_drilling",
+  "version": "4.0.0",
   "main": "main.js",
   "scripts": {
     "start": "electron main.js",
     "build": "electron-packager . electron-tutorial-app --overwrite --platform=win32 --arch=ia32 --icon=frontend/Control_Panel/CSS/App_Logo --prune=true --out=release-builds --version-string.CompanyName=Master Drilling --version-string.ProductName=Remote Drilling Control Panel"
   },
-  "author": "Rikus (Frederik Jacobus) Coetzee",
+  "author": "Rikus (Frederik Jacobus)",
   "license": "ISC",
   "dependencies": {
     "ajax": "0.0.4",
@@ -30,5 +30,5 @@
     "electron": "^6.1.12",
     "electron-packager": "^15.5.2"
   },
-  "description": ""
+  "description": "new and improved"
 }

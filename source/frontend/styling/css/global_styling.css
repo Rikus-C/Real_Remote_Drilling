@@ -3,7 +3,7 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    background-image: url('./wood_background.jpg');
+    background-image: url('../images/wood_background.jpg');
     background-repeat: repeat;
     right: 0;
     left: 0;

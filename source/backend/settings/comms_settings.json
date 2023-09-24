@@ -1,0 +1,5 @@
+{
+  "drive ip": "192.169.1.100",
+  "drive port": 502,
+  "websocket port": 3000
+}
