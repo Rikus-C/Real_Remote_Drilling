@@ -1,28 +1,9 @@
+<!-- ALL IMPORTS ARE AT THE BOTTOM OF THIS PAGE -->
+
 <!DOCTYPE html>
 <html ng-app="myApp">
   <head>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
-
-    <!-- ADD YOUR STYLESHEETS HERE -->
-    <link rel="stylesheet" type="text/css" href="./styling/css/panel_buttons.css">
-    <link rel="stylesheet" type="text/css" href=".styling//css/sweetalert2.css">
-    <link rel="stylesheet" type="text/css" href="./styling/css/global_styling.css">
-
-    <!-- ALL THE PLUGINS YOU INCLUDE -->
-    <script src="./scripts/imports/jquery-3.3.1.js"></script>
-    <script src="./scripts/imports/kioskboard-aio-2.3.0.min.js"></script>
-    <script src="./scripts/imports/sweetalert2.js"></script>
-
-    <!-- YOUR CUSTOM SCRIPTS -->
-    <script src="./settings/button_states.js"></script>
-    <script src="./settings/button_styles.js"></script>
-    <script src="./settings/button_types.js"></script>
-    <script src="./settings/general_settings.js"></script>
-    <script src="./settings/buttons_feedback.js"></script>
-    <script src="./scripts/control_panel.js"></script>
-    <script src="./scripts/websocket.js"></script>
-
-    <!-- MY PAGE CONFIGERATIONS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <title>Remote Drilling</title>
     <link rel="icon" href="images/MDLogo.png" type="image/x-icon">
@@ -540,7 +521,25 @@
         </td>
       </tr>
     </table>
+    <!-- ADD YOUR STYLESHEETS HERE -->
+    <link rel="stylesheet" type="text/css" href="./styling/css/panel_buttons.css">
+    <link rel="stylesheet" type="text/css" href=".styling//css/sweetalert2.css">
+    <link rel="stylesheet" type="text/css" href="./styling/css/global_styling.css">
+
+    <!-- ALL THE PLUGINS YOU INCLUDE -->
+    <script src="./scripts/imports/jquery-3.3.1.js"></script>
+    <script src="./scripts/imports/kioskboard-aio-2.3.0.min.js"></script>
+    <script src="./scripts/imports/sweetalert2.js"></script>
+
+    <!-- YOUR CUSTOM SCRIPTS -->
+    <script src="./settings/_settings.js"></script>
+    <script src="./settings/button_states.js"></script>
+    <script src="./settings/button_styles.js"></script>
+    <script src="./settings/feedback_buttons.js"></script>
+    <script src="./settings/latch_buttons.js"></script>
+    <script src="./settings/toggle_buttons.js"></script>
+    <script src="./settings/push_buttons.js"></script>
+    <script src="./scripts/control_panel.js"></script>
+    <script src="./scripts/websocket.js"></script>
   </body>
-  <script src="./scripts/index_event_listeners_touch.js"></script>
-  <script src="./scripts/index_event_listeners_mouse.js"></script>
 </html>

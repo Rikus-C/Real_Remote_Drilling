@@ -9,9 +9,8 @@ socket.addEventListener("open", function() {
 
 socket.addEventListener("message", function(msg) {
   var message = JSON.parse(msg.data);
-  
+
   if(message.type === "feedback"){
-    //socket.send(JSON.stringify(message)); // please remove later, it is crucial
     show_feedback(message.rawArray);
   } else if (message.type === "request_inputs"){
     socket.send(get_user_inputs());

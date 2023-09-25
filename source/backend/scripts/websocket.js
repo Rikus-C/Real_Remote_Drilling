@@ -31,5 +31,5 @@ function send_dummy_data(ws){
     if(flag === true) ws.send(JSON.stringify(msg1));
     else ws.send(JSON.stringify(msg2))
     flag = !flag;
-  }, 2000);
+  }, 500);
 }

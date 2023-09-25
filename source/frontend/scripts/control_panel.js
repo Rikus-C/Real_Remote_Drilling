@@ -1,17 +1,3 @@
-// these are used for when testing, using nodejs:
-
-// const buttonFeedback = require("../settings/button_feedback.json");
-// const buttonStates = require("../settings/button_states.json");
-// const buttonTypes = require("../settings/button_types.json");
-// const settings = require("../settings/panel_settings.json");
-
-// button types:
-// push   ->  does nothing in the button_pressed_event() function
-// toggle ->  changes state with each press
-// latch  ->  if pressed is turned on or remains on if allready on
-//            can only ne turned off in special cases where another
-//            button being turned on/off will also turn this button off
-
 // basic testing function thats shows button id's when they are pressed
 // please remove from program once it is in production. Also for this
 // function to work the input elemnt's type should not be password.
@@ -19,28 +5,15 @@ function show_button_id(button){
   document.getElementById("password").value = button;
 }
 
-// basic check to see if the settings objects contain the right amount of
-// items in each of them, invalid settings can still be present even if 
-// all tests are passed in this function
-function initial_checks(){
-  var len1 = Object.keys(buttonStates).length;
-  var len2 = Object.keys(buttonStyles).length;
-  var len3 = Object.keys(buttonTypes).length;
-
-  if(len1 !== len2 || len1 !== len3){
-    conbsole.log("warning some of the button settings do not match");
-  }
-} initial_checks();
-
 // called each time drive feedback is received
 function show_feedback(feedback){
   // catch error if setting files are not correctly set-up
-  // if(feedback.length !== buttonFeedback.length){
-  //   console.log("error in process_feedback() function, panel lights will not work");
-  //   return;
-  // } // removed for testing purposes, add later on
+  if(feedback.length !== feedbackButtons.length){
+    console.log("error in process_feedback() function, panel lights will not work");
+    return;
+  }
 
-  buttonFeedback.forEach(function(button, index){
+  feedbackButtons.forEach(function(button, index){
     if(feedback[index] === 1){
       // change skin of button to light up (white)
       document.getElementById(button).className = buttonStyles[button]["feedback"];
@@ -51,12 +24,13 @@ function show_feedback(feedback){
   });
 }
 
-// called when ever a button was pressed
-function update_button_styles(){
-  Object.keys(buttonStates).forEach(function(button){
+// called when ever a button was pressed                    
+function update_button_styles(buttonType){
+  buttonType.forEach(function(button){
+    // add logic to ensure this does not apply to push buttons
     if (buttonStates[button] === 1){
       // give button the pressed style
-      document.getElementById(button).className = buttonStyles[button]["latched"];
+      document.getElementById(button).className = buttonStyles[button]["active"];
     } else if (buttonStates[button] === 0){
       // give button the normal style (not pressed)
       document.getElementById(button).className = buttonStyles[button]["normal"];
@@ -71,28 +45,28 @@ function button_special_logic(){
 
 }
 
+// function is only called when latch or toggle button is pressed
 function button_pressed_events(button){
-  show_button_id(button);
-  if(buttonType[button] == "toggle"){
+  show_button_id(button); // remove later, used for developing purposes
+  // add logic here to check if button is not push button
+  if(toggleButtons.includes(button)){
     buttonStates[button] = !buttonStates[button];
   }
-  else if(buttonType[button] == "latch"){
+  else if(latchButtons.includes(button)){
     buttonStates[button] = 1;
   }
-  button_special_logic();  
-  update_button_styles();
+
+  button_special_logic(); 
+  update_button_styles(latchButtons);
+  update_button_styles(toggleButtons);
 }
 
 function check_push_buttons(){
-  Object.keys(buttonStates).forEach(function(button){
-    // if it is a toggle type then no it should not be changed
-    if(buttonType[button] === "push"){
-      var currentButton = document.getElementById(button);
-      // check if button is currently being pressed
-      if (currentButton.classList.contains("pressed")) {
-        buttonStates[button] = 1;
-      } 
-      else buttonStates[button] = 0;
+  pushButtons.forEach(function(button){
+    if(document.getElementById(button).classList.contains("pressed")){
+      buttonStates[button] = 1;
+    } else {
+      buttonStates[button] = 0;
     }
   });
 }
@@ -101,3 +75,28 @@ function get_user_inputs(){ // this function will still need some work to accomu
   check_push_buttons();
   return buttonStates;
 }
+
+function initial_checks(){
+  const len1 = pushButtons.length;
+  const len2 = latchButtons.length;
+  const len3 = toggleButtons.length;
+  const len4 = Object.keys(buttonStates).length;
+  const len5 = Object.keys(buttonStyles).length;
+
+  if(len1 + len2 + len3 !== len4 || len4 !== len5){
+    conbsole.log("warning some of the button settings do not match");
+  }
+} 
+
+function create_event_listeners(inputType, buttonType){
+  buttonType.forEach(function(button){
+    document.getElementById(button).addEventListener(inputType, function() {
+      button_pressed_events(this.id);
+    });
+  });
+} 
+
+initial_checks();
+create_event_listeners(settings["input type"], latchButtons);
+create_event_listeners(settings["input type"], toggleButtons);
+create_event_listeners(settings["input type"], pushButtons); // only used for debugging and testing, remove later please

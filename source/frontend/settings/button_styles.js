@@ -1,247 +1,247 @@
-var buttomStyles = {
-  "b-01": {
+var buttonStyles = {
+  "B-01": {
     "normal": "",
-    "latched": "",
+    "active": "",
     "feedback": ""
   },
-  "b-02": {
+  "B-02": {
     "normal": "",
-    "latched": "",
+    "active": "",
     "feedback": ""
   },
-  "b-03": {
+  "B-03": {
     "normal": "",
-    "latched": "",      
+    "active": "",      
     "feedback": ""
   },
-  "b-04": {
+  "B-04": {
     "normal": "",
-    "latched": "",
+    "active": "",
     "feedback": ""
   },
-  "b-05": {
+  "B-05": {
+    "normal": "emergency",
+    "active": "lit-emergency",
+    "feedback": "lit-emergency"
+  },
+  "B-06": {
     "normal": "",
-    "latched": "",
+    "active": "",
     "feedback": ""
   },
-  "b-06": {
+  "B-07": {
     "normal": "",
-    "latched": "",
+    "active": "",
     "feedback": ""
   },
-  "b-07": {
+  "B-08": {
     "normal": "",
-    "latched": "",
+    "active": "",
     "feedback": ""
   },
-  "b-08": {
+  "B-09": {
     "normal": "",
-    "latched": "",
+    "active": "",
     "feedback": ""
   },
-  "b-09": {
+  "B-10": {
     "normal": "",
-    "latched": "",
+    "active": "",
     "feedback": ""
   },
-  "b-10": {
+  "B-11": {
     "normal": "",
-    "latched": "",
+    "active": "",
     "feedback": ""
   },
-  "b-11": {
-    "normal": "",
-    "latched": "",
-    "feedback": ""
-  },
-  "b-12": {
+  "B-12": {
     "normal": "button-green",
-    "latched": "",
+    "active": "",
     "feedback": "lit-button-green"
   },
-  "b-13": {
-    "normal": "",
-    "latched": "",
+  "B-13": {
+    "normal": "button-red",
+    "active": "",
+    "feedback": "lit-button-red"
+  },
+  "B-14": {
+    "normal": "button-green",
+    "active": "",
+    "feedback": "lit-button-green"
+  },
+  "B-15": {
+    "normal": "button-green",
+    "active": "",
+    "feedback": "lit-button-green"
+  },
+  "B-16": {
+    "normal": "button-green",
+    "active": "",
+    "feedback": "lit-button-green"
+  },
+  "B-17": {
+    "normal": "button-green",
+    "active": "",
+    "feedback": "lit-button-green"
+  },
+  "B-18": {
+    "normal": "button-red",
+    "active": "",
+    "feedback": "lit-button-red"
+  },
+  "B-19": {
+    "normal": "button-red",
+    "active": "",
+    "feedback": "lit-button-red"
+  },
+  "B-20": {
+    "normal": "button-green",
+    "active": "",
+    "feedback": "lit-button-green"
+  },
+  "B-21": {
+    "normal": "button-green",
+    "active": "",
+    "feedback": "lit-button-green"
+  },
+  "B-22": {
+    "normal": "button-green",
+    "active": "",
+    "feedback": "lit-button-green"
+  },
+  "B-23": {
+    "normal": "button-green",
+    "active": "",
+    "feedback": "lit-button-green"
+  },
+  "B-24": {
+    "normal": "button-green",
+    "active": "",
+    "feedback": "lit-button-green"
+  },
+  "B-25": {
+    "normal": "button-green",
+    "active": "",
+    "feedback": "lit-button-green"
+  },
+  "B-26": {
+    "normal": "button-green",
+    "active": "",
+    "feedback": "lit-button-green"
+  },
+  "B-27": {
+    "normal": "square-blue",
+    "active": "",
     "feedback": ""
   },
-  "b-14": {
+  "B-28": {
     "normal": "",
-    "latched": "",
+    "active": "",
     "feedback": ""
   },
-  "b-15": {
+  "B-29": {
     "normal": "",
-    "latched": "",
+    "active": "",
     "feedback": ""
   },
-  "b-16": {
+  "B-30": {
     "normal": "",
-    "latched": "",
+    "active": "",
     "feedback": ""
   },
-  "b-17": {
+  "B-31": {
+    "normal": "button-orange",
+    "active": "",
+    "feedback": "lit-button-orange"
+  },
+  "B-32": {
+    "normal": "button-orange",
+    "active": "",
+    "feedback": "lit-button-orange"
+  },
+  "B-33": {
+    "normal": "button-orange",
+    "active": "",
+    "feedback": "lit-button-orange"
+  },
+  "B-34": {
+    "normal": "button-orange",
+    "active": "",
+    "feedback": "lit-button-orange"
+  },
+  "B-35": {
+    "normal": "button-orange",
+    "active": "",
+    "feedback": "lit-button-orange"
+  },
+  "B-36": {
+    "normal": "button-orange",
+    "active": "",
+    "feedback": "lit-button-orange"
+  },
+  "B-37": {
     "normal": "",
-    "latched": "",
+    "active": "",
     "feedback": ""
   },
-  "b-18": {
+  "B-38": {
     "normal": "",
-    "latched": "",
+    "active": "",
     "feedback": ""
   },
-  "b-19": {
-    "normal": "",
-    "latched": "",
+  "B-39": {
+    "normal": "square-red",
+    "active": "lit-square-red",
     "feedback": ""
   },
-  "b-20": {
-    "normal": "",
-    "latched": "",
+  "B-40": {
+    "normal": "square-red",
+    "active": "lit-square-red",
     "feedback": ""
   },
-  "b-21": {
+  "B-41": {
     "normal": "",
-    "latched": "",
+    "active": "",
     "feedback": ""
   },
-  "b-22": {
+  "B-42": {
     "normal": "",
-    "latched": "",
+    "active": "",
     "feedback": ""
   },
-  "b-23": {
+  "B-43": {
     "normal": "",
-    "latched": "",
+    "active": "",
     "feedback": ""
   },
-  "b-24": {
+  "B-44": {
     "normal": "",
-    "latched": "",
+    "active": "",
     "feedback": ""
   },
-  "b-25": {
+  "B-45": {
     "normal": "",
-    "latched": "",
+    "active": "",
     "feedback": ""
   },
-  "b-26": {
+  "B-46": {
     "normal": "",
-    "latched": "",
+    "active": "",
     "feedback": ""
   },
-  "b-27": {
+  "B-47": {
     "normal": "",
-    "latched": "",
+    "active": "",
     "feedback": ""
   },
-  "b-28": {
+  "B-48": {
     "normal": "",
-    "latched": "",
+    "active": "",
     "feedback": ""
   },
-  "b-29": {
+  "B-49": {
     "normal": "",
-    "latched": "",
-    "feedback": ""
-  },
-  "b-30": {
-    "normal": "",
-    "latched": "",
-    "feedback": ""
-  },
-  "b-31": {
-    "normal": "",
-    "latched": "",
-    "feedback": ""
-  },
-  "b-32": {
-    "normal": "",
-    "latched": "",
-    "feedback": ""
-  },
-  "b-33": {
-    "normal": "",
-    "latched": "",
-    "feedback": ""
-  },
-  "b-34": {
-    "normal": "",
-    "latched": "",
-    "feedback": ""
-  },
-  "b-35": {
-    "normal": "",
-    "latched": "",
-    "feedback": ""
-  },
-  "b-36": {
-    "normal": "",
-    "latched": "",
-    "feedback": ""
-  },
-  "b-37": {
-    "normal": "",
-    "latched": "",
-    "feedback": ""
-  },
-  "b-38": {
-    "normal": "",
-    "latched": "",
-    "feedback": ""
-  },
-  "b-39": {
-    "normal": "",
-    "latched": "",
-    "feedback": ""
-  },
-  "b-40": {
-    "normal": "",
-    "latched": "",
-    "feedback": ""
-  },
-  "b-41": {
-    "normal": "",
-    "latched": "",
-    "feedback": ""
-  },
-  "b-42": {
-    "normal": "",
-    "latched": "",
-    "feedback": ""
-  },
-  "b-43": {
-    "normal": "",
-    "latched": "",
-    "feedback": ""
-  },
-  "b-44": {
-    "normal": "",
-    "latched": "",
-    "feedback": ""
-  },
-  "b-45": {
-    "normal": "",
-    "latched": "",
-    "feedback": ""
-  },
-  "b-46": {
-    "normal": "",
-    "latched": "",
-    "feedback": ""
-  },
-  "b-47": {
-    "normal": "",
-    "latched": "",
-    "feedback": ""
-  },
-  "b-48": {
-    "normal": "",
-    "latched": "",
-    "feedback": ""
-  },
-  "b-49": {
-    "normal": "",
-    "latched": "",
+    "active": "",
     "feedback": ""
   }
 };
