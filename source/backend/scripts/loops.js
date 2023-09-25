@@ -1,7 +1,11 @@
-function initiate_feedabck_loop(){
+function start_feedabck_loop(){
   
 }
 
-function initiate_user_input_loop(){
+function start_user_input_loop(){
+  
+}
+
+function start_watchdog_loop(){
   
 }
