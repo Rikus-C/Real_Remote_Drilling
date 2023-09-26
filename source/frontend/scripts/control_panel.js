@@ -36,6 +36,7 @@ function update_button_styles(buttonType){
       document.getElementById(button).className = buttonStyles[button]["normal"];
     }
   });
+  console.log(buttonStates);
 }
 
 // some logic used for unlatching buttons, or any other user
@@ -50,7 +51,9 @@ function button_pressed_events(button){
   show_button_id(button); // remove later, used for developing purposes
   // add logic here to check if button is not push button
   if(toggleButtons.includes(button)){
-    buttonStates[button] = !buttonStates[button];
+    if(buttonStates[button] === 1)
+      buttonStates[button] = 0;
+    else buttonStates[button] = 1;
   }
   else if(latchButtons.includes(button)){
     buttonStates[button] = 1;
@@ -71,7 +74,7 @@ function check_push_buttons(){
   });
 }
 
-function get_user_inputs(){ // this function will still need some work to accomudate toggle buttons
+function get_user_inputs(){
   check_push_buttons();
   return buttonStates;
 }
@@ -84,7 +87,7 @@ function initial_checks(){
   const len5 = Object.keys(buttonStyles).length;
 
   if(len1 + len2 + len3 !== len4 || len4 !== len5){
-    conbsole.log("warning some of the button settings do not match");
+    console.log("warning some of the button settings do not match");
   }
 } 
 

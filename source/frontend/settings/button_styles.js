@@ -10,13 +10,13 @@ var buttonStyles = {
     "feedback": ""
   },
   "B-03": {
-    "normal": "",
-    "active": "",      
+    "normal": "second",
+    "active": "lit-second",      
     "feedback": ""
   },
   "B-04": {
-    "normal": "",
-    "active": "",
+    "normal": "second",
+    "active": "lit-second",      
     "feedback": ""
   },
   "B-05": {
