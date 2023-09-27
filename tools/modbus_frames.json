@@ -1,0 +1,50 @@
+{
+  "request feedback": {
+    "transaction id": 12345,
+    "protocol id": 0,
+    "length": 10,
+    "unit code": 1,
+    "function code": 3,
+    "register": 0,
+    "data": [
+      0,
+      0
+    ]
+  },
+  "give inputs": {
+    "transaction id": 12345,
+    "protocol id": 0,
+    "length": 10,
+    "unit code": 1,
+    "function code": 3,
+    "register": 0,
+    "data": [
+      0,
+      0
+    ]
+  },
+  "watchdog high": {
+    "transaction id": 12345,
+    "protocol id": 0,
+    "length": 10,
+    "unit code": 1,
+    "function code": 3,
+    "register": 0,
+    "data": [
+      0,
+      0
+    ]
+  },
+  "watchdog low": {
+    "transaction id": 12345,
+    "protocol id": 0,
+    "length": 10,
+    "unit code": 1,
+    "function code": 3,
+    "register": 0,
+    "data": [
+      0,
+      0
+    ]
+  }
+}

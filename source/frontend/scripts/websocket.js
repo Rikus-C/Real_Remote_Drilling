@@ -11,7 +11,7 @@ socket.addEventListener("message", function(msg) {
   var message = JSON.parse(msg.data);
 
   if(message.type === "feedback"){ // move all oif this to its own function in control_panel.js
-    show_feedback(message.rawArray);
+    show_feedback(message.data);
   } else if (message.type === "request inputs"){
     socket.send(get_user_inputs());
   } else if (message.type === "message from frontend"){

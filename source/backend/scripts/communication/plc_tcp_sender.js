@@ -1,16 +1,17 @@
-var tcp_socket;
+var tcp_socket_sender;
+var tcp_socket = {};
 tcp_socket.ready = false;
 
+tcp_socket.forward = function(obj){
+  tcp_socket_sender.write(JSON.stringify(obj));
+}
+
 function initiate_tcp_socket_sender(client){
-  tcp_socket = client;
+  tcp_socket_sender = client;
   tcp_socket.ready = true;
 }
 
-function tcp_socket_forward(obj){
-  tcp_socket.write(JSON.stringify(obj));
-}
-
 module.exports = {
-  initiate_tcp_socket_sender, 
-  tcp_socket_forward
+  tcp_socket,
+  initiate_tcp_socket_sender
 };

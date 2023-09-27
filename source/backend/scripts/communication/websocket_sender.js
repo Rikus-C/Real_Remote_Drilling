@@ -1,17 +1,18 @@
-var websocket;
-websocket.ready = false;
+var websocket_sender;
+var websocket = {}; 
+websocket.ready = false; 
+
+websocket.forward = function(obj){
+  websocket_sender.send(JSON.stringify(obj));
+}
 
 function initiate_websocket_sender(ws){
-  websocket = ws;
+  websocket_sender = ws; 
   websocket.ready = true;
 }
 
-function websocket_forward(obj){
-  websocket.send(JSON.stringify(obj));
-}
-
 module.exports = {
-  initiate_websocket_sender, 
-  websocket_forward
+  websocket,
+  initiate_websocket_sender
 };
 
