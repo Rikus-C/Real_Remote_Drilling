@@ -1,4 +1,4 @@
-require("./backend/scripts/websocket.js");
+require("./backend/scripts/loops.js");
 
 const {app, BrowserWindow} = require("electron");
 
@@ -15,7 +15,7 @@ function createWindow() {
   win.loadFile("./frontend/panel.html");
 
   // Open the DevTools (remove this line in production)
-  win.webContents.openDevTools();
+  // win.webContents.openDevTools();
 }
 
 app.whenReady().then(createWindow);

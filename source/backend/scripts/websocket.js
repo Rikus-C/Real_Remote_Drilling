@@ -3,22 +3,26 @@ const settings = require("../settings/comms_settings.json");
 
 // create a websocket server
 const wss = new websocket.Server({port: settings["websocket port"]});
+let hmi_socket;
 
 // event listener for when a client connects
 wss.on("connection", (ws) => {
-  console.log("A client connected.");
+  hmi_socket = ws;
   send_dummy_data(ws); // please remove later or face the conciquences
-  // event listener for when a message is received from a client
+
   ws.on("message", (message) => {
-    console.log("Received from frontend:\n");
-    console.log(JSON.parse(message));
+    
   });
 
   // event listener for when a client disconnects
   ws.on("close", () => {
-    console.log("A client disconnected.");
+    
   });
 });
+
+function send_and_wait(frame, condition){
+  hmi_socket.send();
+}
 
 // all this code can be removed later
 
@@ -32,4 +36,6 @@ function send_dummy_data(ws){
     ws.send(JSON.stringify(msg));
   }, 500);
 }
+
+module.exports = {hmi_socket, send_and_wait};
 
