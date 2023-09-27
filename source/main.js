@@ -1,4 +1,6 @@
-require("./backend/scripts/functionality/loops.js");
+require("./backend/scripts/functionality/watchdog.js");
+require("./backend/scripts/communication/plc_tcp_receiver.js");
+require("./backend/scripts/communication/websocket_receiver.js");
 
 const {app, BrowserWindow} = require("electron");
 
@@ -6,12 +8,13 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
+    fullscreen: true,
+    frame: true,
     webPreferences: {
       nodeIntegration: true,
     },
   });
 
-  // Load your HTML file
   win.loadFile("./frontend/panel.html");
 }
 

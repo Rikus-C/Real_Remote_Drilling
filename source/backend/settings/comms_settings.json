@@ -1,8 +1,9 @@
 {
-  "drive ip": "192.169.1.100",
-  "drive port": 502,
+  "plc ip": "192.169.1.100",
+  "plc port": 502,
   "websocket port": 3000,
   "feedback rate": 1000,
   "input rate": 1000,
-  "watchdog toggle rate": 1000
+  "watchdog toggle rate": 1000,
+  "start up wait time": 2000
 }

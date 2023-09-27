@@ -1,5 +1,3 @@
-const modbus_frames = require("../../settings/modbus_frames.json");
-
 function to_word(value) {
   const msb = (value >> 8) & 0xFF;
   const lsb = value & 0xFF;
