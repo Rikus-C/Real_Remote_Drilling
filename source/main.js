@@ -1,6 +1,8 @@
-require("./backend/scripts/functionality/watchdog.js");
 require("./backend/scripts/communication/plc_tcp_receiver.js");
 require("./backend/scripts/communication/websocket_receiver.js");
+require("./backend/scripts/functionality/watchdog.js");
+require("./backend/scripts/functionality/plc_loop.js");
+require("./backend/scripts/functionality/frontend_loop.js");
 
 const {app, BrowserWindow} = require("electron");
 

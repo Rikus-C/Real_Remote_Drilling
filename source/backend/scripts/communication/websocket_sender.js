@@ -1,7 +1,9 @@
 var websocket;
+websocket.ready = false;
 
 function initiate_websocket_sender(ws){
   websocket = ws;
+  websocket.ready = true;
 }
 
 function websocket_forward(obj){

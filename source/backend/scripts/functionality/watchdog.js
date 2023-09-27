@@ -4,6 +4,7 @@ const create_modbus_frame = require("./modbus.js").create_modbus_frame;
 const tcp_socket_forward = require("../communication/plc_tcp_sender.js").tcp_socket_forward;
 
 async function start_watchdog_timer(){
+  // check to ensure that the conenction is established first
   while(true){
     // send watchdog high signal
     tcp_socket_forward(create_modbus_frame(frames["watchdog high"]));
