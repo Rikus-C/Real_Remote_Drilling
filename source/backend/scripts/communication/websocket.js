@@ -1,5 +1,5 @@
 const websocket = require("ws");
-const settings = require("../settings/comms_settings.json");
+const settings = require("../../settings/comms_settings.json");
 
 // create a websocket server
 const wss = new websocket.Server({port: settings["websocket port"]});

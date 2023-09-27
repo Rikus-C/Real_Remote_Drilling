@@ -3,10 +3,10 @@ const program_delay_timer = require("./functions.js").program_delay_timer;
 const proccess_hmi_inputs = require("./functions.js").proccess_hmi_inputs;
 const generate_modbus_frame = require("./modbus.js").generate_modbus_frame;
 const read_modbus_frame = require("./modbus.js").read_modbus_frame;
-const send_and_wait = require("./websocket.js").send_and_wait;
+const send_and_wait = require("../communication/websocket.js").send_and_wait;
 const alert_on_hmi = require("./functions.js").alert_on_hmi;
-const settings = require("../settings/comms_settings.json");
-const hmi_socket = require("./websocket.js").hmi_socket;
+const settings = require("../../settings/comms_settings.json");
+const hmi_socket = require("../communication/websocket.js").hmi_socket;
 
 async function start_feedback_loop(){
   while(true){

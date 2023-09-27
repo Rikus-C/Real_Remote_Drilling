@@ -1,4 +1,4 @@
-const modbus_frames = require("../settings/modbus_frames.json");
+const modbus_frames = require("../../settings/modbus_frames.json");
 
 function to_word(value) {
   const msb = (value >> 8) & 0xFF;
@@ -55,11 +55,6 @@ function read_modbus_frame(raw){
 
   return drive_message;
 }
-
-console.log("modbus frame:\n");
-console.log(create_modbus_frame(modbus_frames["request feedback"]));
-console.log("\n\ndata from reposne:\n");
-console.log(read_modbus_frame(Array.from(create_modbus_frame(modbus_frames["request feedback"]))));
 
 module.exports = {
   create_modbus_frame, 

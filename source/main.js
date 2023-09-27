@@ -1,4 +1,4 @@
-require("./backend/scripts/loops.js");
+require("./backend/scripts/functionality/loops.js");
 
 const {app, BrowserWindow} = require("electron");
 
@@ -13,9 +13,6 @@ function createWindow() {
 
   // Load your HTML file
   win.loadFile("./frontend/panel.html");
-
-  // Open the DevTools (remove this line in production)
-  // win.webContents.openDevTools();
 }
 
 app.whenReady().then(createWindow);
