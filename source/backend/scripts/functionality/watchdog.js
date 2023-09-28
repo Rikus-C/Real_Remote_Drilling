@@ -14,7 +14,7 @@ async function start_watchdog_timer(){
     await program_delay_timer(settings["watchdog toggle rate"]);
 
     // send watchdog low signal 
-    cp_socket.forward(create_modbus_frame(frames["watchdog low"]));
+    tcp_socket.forward(create_modbus_frame(frames["watchdog low"]));
     await program_delay_timer(settings["watchdog toggle rate"]);
   }
 }

@@ -22,7 +22,7 @@ function process_drive_feedback(data){ // [word, word, word]
     data.push((padding + binaryString).split('').map(Number));
   });
 
-  message["type"] =  "feedabck";
+  message["type"] = "feedabck";
   message["data"] = to_1D_list(data);
 
   // send drive feedback to the hmi
@@ -33,7 +33,7 @@ function process_drive_feedback(data){ // [word, word, word]
   },settings["feedback rate"]);
 }
 
-start_feedback_loop();
+// start_feedback_loop();
 
 module.exports = {
   process_drive_feedback

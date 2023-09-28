@@ -37,7 +37,6 @@ function create_modbus_frame(frame_info){
   frame_info["data"].forEach(function(value){
     frame.push(to_word(value));
   });
-
   return Buffer.from(to_1D_list(frame));
 }
 
@@ -48,7 +47,7 @@ function read_modbus_frame(raw){
 
   if(raw.length > 10){
     drive_message.data = [];
-    for(var x = 10; x < data_length + 8; x += 2){
+    for(var x = 10; x <= data_length + 8; x += 2){
       drive_message.data.push(word_to_decimal(raw[x], raw[x+1]));
     }
   }
@@ -57,9 +56,10 @@ function read_modbus_frame(raw){
 }
 
 console.log("modbus frame:\n");
-console.log(create_modbus_frame(modbus_frames["request feedback"]));
+console.log(create_modbus_frame(modbus_frames["watchdog high"]));
 console.log("\n\ndata from reposne:\n");
-console.log(read_modbus_frame(Array.from(create_modbus_frame(modbus_frames["request feedback"]))));
+console.log(read_modbus_frame(Array.from(create_modbus_frame(modbus_frames["watchdog high"]))));
+// read_modbus_frame(Array.from(create_modbus_frame(modbus_frames["watchdog high"])));
 
 module.exports = {
   create_modbus_frame, 

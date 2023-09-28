@@ -1,6 +1,8 @@
 {
-  "plc ip": "192.169.1.100",
+  "plc ipv4": "192.169.1.100",
+  "plc ipv6": "",
   "plc port": 502,
+  "plc connection type": "ipv4", 
   "websocket port": 3000,
   "feedback rate": 1000,
   "input rate": 1000,

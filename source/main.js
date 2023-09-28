@@ -1,4 +1,12 @@
-require("./backend/scripts/communication/plc_tcp_receiver.js");
+const settings = require("./backend/settings/comms_settings.json");
+
+if (settings["plc connection type"] === "ipv4"){
+  require("./backend/scripts/communication/plc_tcp_receiver_v4.js");
+}
+else if (settings["plc connection type"] === "ipv6"){
+  require("./backend/scripts/communication/plc_tcp_receiver_v6.js");
+}
+
 require("./backend/scripts/communication/websocket_receiver.js");
 require("./backend/scripts/functionality/watchdog.js");
 require("./backend/scripts/functionality/plc_loop.js");

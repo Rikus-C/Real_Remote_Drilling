@@ -6,7 +6,7 @@ const process_drive_feedback = require("../functionality/feedback_loop.js").proc
 
 const client = new net.Socket();
 
-client.connect(settings["plc port"], settings["plc ip"], function() {
+client.connect(settings["plc port"], settings["plc ipv4"], function() {
   tcp_sender_initiate(client);
   console.log("Connection to Drill Established");
 });

@@ -46,7 +46,7 @@ function read_modbus_frame(raw){
 
   if(raw.length > 10){
     drive_message.data = [];
-    for(var x = 10; x < data_length + 8; x += 2){
+    for(var x = 10; x <= data_length + 8; x += 2){
       drive_message.data.push(word_to_decimal(raw[x], raw[x+1]));
     }
   }
