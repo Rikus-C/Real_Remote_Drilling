@@ -1,26 +1,4 @@
 {
-  "request feedback": {
-    "transaction id": 1,
-    "protocol id": 0,
-    "length": 6,
-    "unit code": 1,
-    "function code": 3,
-    "register": 7199,
-    "data": [
-      2
-    ]
-  },
-  "give inputs": {
-    "transaction id": 2,
-    "protocol id": 0,
-    "length": 17,
-    "unit code": 1,
-    "function code": 16,
-    "register": 7269,
-    "data": [
-      
-    ]
-  },
   "watchdog high": {
     "transaction id": 99,
     "protocol id": 0,
@@ -42,5 +20,25 @@
     "data": [
       0
     ]
+  },
+  "request feedback": {
+    "transaction id": 1,
+    "protocol id": 0,
+    "length": 6,
+    "unit code": 1,
+    "function code": 3,
+    "register": 7199,
+    "data": [
+      1
+    ]
+  },
+  "give inputs": {
+    "transaction id": 2,
+    "protocol id": 0,
+    "length": 17,
+    "unit code": 1,
+    "function code": 16,
+    "register": 7269,
+    "data": []
   }
 }

@@ -35,22 +35,23 @@ function create_modbus_frame(frame_info){
   frame_info["data"].forEach(function(value){
     frame.push(to_word(value));
   });
-
+  
   return Buffer.from(to_1D_list(frame));
 }
 
 function read_modbus_frame(raw){
+  //console.log(raw);
   var drive_message = {};
+  drive_message["data"] = [];
+  drive_message["function code"] = raw[7];
   drive_message["transaction id"] = word_to_decimal([raw[0], raw[1]]);
-  var data_length = word_to_decimal([raw[4], raw[5]]) - 4;
 
-  if(raw.length > 10){
-    drive_message.data = [];
-    for(var x = 10; x <= data_length + 8; x += 2){
-      drive_message.data.push(word_to_decimal(raw[x], raw[x+1]));
+  if(raw[7] === 3){ // if it returns requested data (raw[7] == function code)
+    for(var x = 8; x <= 8 + raw[8]; x += 2){
+      drive_message["data"].push(word_to_decimal[raw[x], raw[x+1]]);
     }
   }
-
+  //console.log(drive_message);
   return drive_message;
 }
 

@@ -8,12 +8,12 @@ const client = new net.Socket();
 
 client.connect(settings["plc port"], settings["plc ipv4"], function() {
   tcp_sender_initiate(client);
-  console.log("Connection to Drill Established");
+  console.log("Connection to Drill Established using IPv4");
 });
 
 client.on("data", function(data){
   var modbus_frame = read_modbus_frame(data);
-
+  
   if(modbus_frame["transaction id"] === 1){
     process_drive_feedback(modbus_frame["data"]);
   }

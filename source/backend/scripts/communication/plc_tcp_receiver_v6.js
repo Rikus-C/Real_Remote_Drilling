@@ -12,7 +12,7 @@ const client = net.createConnection({
 
 client.on("connect", function(){
   tcp_sender_initiate(client);
-  console.log("Connection to Drill Established");
+  console.log("Connection to Drill Established using IPv6");
 });
 
 client.on("data", function(data){
