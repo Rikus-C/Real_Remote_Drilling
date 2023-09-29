@@ -14,7 +14,7 @@ async function start_feedback_loop(){
 }
 
 async function process_drive_feedback(data){ // [word, word, word]
-  // format the drive feedback
+  // format the drive feedback 
   var message = {};
   var new_data = [];
 
@@ -24,14 +24,14 @@ async function process_drive_feedback(data){ // [word, word, word]
     new_data.push((padding + binaryString).split('').map(Number));
   });
 
-  message["type"] = "feedabck";
+  message["type"] = "feedback";
   message["data"] = to_1D_list(new_data);
 
   // send drive feedback to the hmi
   websocket.forward(message);
 
   await program_delay_timer(settings["feedback rate"]);
-  tcp_socket.forward(frames["request feedabck"]);
+  tcp_socket.forward(frames["request feedback"]);
 }
 
 start_feedback_loop();

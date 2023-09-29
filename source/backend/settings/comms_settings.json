@@ -1,7 +1,7 @@
 {
-  "plc ipv4": "192.168.1.100",
+  "plc ipv4": "127.0.0.1",
   "plc ipv6": "",
-  "plc port": 502,
+  "plc port": 8080,
   "plc connection type": "ipv4", 
   "websocket port": 3000,
   "feedback rate": 1000,
