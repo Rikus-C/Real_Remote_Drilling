@@ -40,7 +40,7 @@ function create_modbus_frame(frame_info){
 }
 
 function read_modbus_frame(raw){
-  //console.log(raw);
+  console.log(raw);
   var drive_message = {};
   drive_message["data"] = [];
   drive_message["function code"] = raw[7];
