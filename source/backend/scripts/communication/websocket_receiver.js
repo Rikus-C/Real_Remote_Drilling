@@ -10,8 +10,8 @@ wss.on("connection", function(ws){
   initiate_websocket_sender(ws);
   ws.on("message", function(msg){
     var message = JSON.parse(msg);
-    if(message.type === ""){
-
+    if(message.type === "user inputs"){
+      console.log(message.data);
     } 
     else if(message.type === ""){
 

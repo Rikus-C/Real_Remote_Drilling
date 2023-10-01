@@ -8,12 +8,6 @@ function show_alert_message(msg){
 
 // called each time drive feedback is received
 function show_feedback(feedback){
-  // catch error if setting files are not correctly set-up
-  if(feedback.length !== feedbackButtons.length){
-    console.log("error in process_feedback() function, panel lights will not work");
-    return;
-  }
-
   feedbackButtons.forEach(function(button, index){
     if(feedback[index] === 1){
       // change skin of button to light up (white)
@@ -189,7 +183,11 @@ function check_push_buttons(){
 
 function get_user_inputs(){
   check_push_buttons();
-  return buttonStates;
+  var user_inputs = {type: "user inputs", data: []};
+  Object.keys(buttonStates).forEach(function(button){
+    user_inputs.data.push(buttonStates[button]);
+  });
+  return user_inputs;
 }
 
 function initial_checks(){

@@ -4,18 +4,20 @@
 
 const net = require('net');
 
-const hexValues = ["00", "01", "00", "00", "00", "09", "01", "03", "06", "70", "00", "00", "00", "00", "00"];
+const hexValues = ["00", "01", "00", "00", "00", "09", "01", "03", "04", "ff", "ff", "ff", "ff"];
 
 // Create a TCP server
 const server = net.createServer((socket) => {
-  console.log("Remote Drilling Connected");
+  console.log("Connected");
 
   socket.on('data', () => {
     socket.write(Buffer.from(hexValues.join(""), 'hex'));
   });
 
   // Handle client disconnection
-  socket.on('end', () => {});
+  socket.on('end', () => {
+    console.log("Disconnected");
+  });
 
   // Handle errors
   socket.on('error', (err) => {});

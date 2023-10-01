@@ -6,6 +6,6 @@
   "websocket port": 3000,
   "feedback rate": 1000,
   "input rate": 1000,
-  "watchdog toggle rate": 1000,
+  "watchdog toggle wait": 1000,
   "start up wait time": 2000
 }

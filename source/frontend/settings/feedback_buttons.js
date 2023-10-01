@@ -1,4 +1,4 @@
-const feedbackButtons = [
+const feedbackButtons = [ // button sequence should match that of the incoming bits
   "B-12",
   "B-13",
   "B-14",

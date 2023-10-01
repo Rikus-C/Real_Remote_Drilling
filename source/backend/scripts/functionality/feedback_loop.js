@@ -30,6 +30,8 @@ async function process_drive_feedback(data){ // [word, word, word]
   // send drive feedback to the hmi
   websocket.forward(message);
 
+  console.log(message);
+
   await program_delay_timer(settings["feedback rate"]);
   tcp_socket.forward(frames["request feedback"]);
 }
