@@ -173,7 +173,7 @@ function button_pressed_events(button){
 
 function check_push_buttons(){ // this function will have to be redone
   pushButtons.forEach(function(button){
-    const btn = $(button);
+    const btn = $("#" + button);
 
     // btn.mousedown(function() {
     //   console.log("Button pressed");
@@ -186,14 +186,6 @@ function check_push_buttons(){ // this function will have to be redone
     // });
   });
 }
-
-// pushButtons.forEach(function(button){
-  //   if(document.getElementById(button).classList.contains("pressed")){ // this is not working, the priciple is wrong
-  //     buttonStates[button] = 1;
-  //   } else {
-  //     buttonStates[button] = 0;
-  //   }
-  // });
 
 function get_user_inputs(){
   check_push_buttons();
