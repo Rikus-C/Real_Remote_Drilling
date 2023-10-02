@@ -1,11 +1,11 @@
 {
-  "plc ipv4": "127.0.0.1",
+  "plc ipv4": "192.168.1.100",
   "plc ipv6": "",
-  "plc port": 8080,
+  "plc port": 502,
   "plc connection type": "ipv4", 
   "websocket port": 3000,
-  "feedback rate": 1000,
-  "input rate": 1000,
+  "feedback wait": 50,
+  "input wait": 1000,
   "watchdog toggle wait": 1000,
   "start up wait time": 2000
 }

@@ -20,7 +20,7 @@ async function process_drive_feedback(data){ // [word, word, word]
 
   data.forEach(function(value){
     var binaryString = value.toString(2);
-    var padding = '0'.repeat(16 - binaryString.length);
+    var padding = "0".repeat(16 - binaryString.length);
     new_data.push((padding + binaryString).split('').map(Number));
   });
 
@@ -30,10 +30,10 @@ async function process_drive_feedback(data){ // [word, word, word]
   // send drive feedback to the hmi
   websocket.forward(message);
 
-  console.log(message);
+  // console.log(message);
 
-  await program_delay_timer(settings["feedback rate"]);
-  tcp_socket.forward(frames["request feedback"]);
+  await program_delay_timer(settings["feedback wait"]);
+  tcp_socket.forward(create_modbus_frame(frames["request feedback"]));
 }
 
 start_feedback_loop();

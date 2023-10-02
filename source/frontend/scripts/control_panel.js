@@ -171,15 +171,29 @@ function button_pressed_events(button){
   show_button_id(button); // remove later, used for developing purposes
 }
 
-function check_push_buttons(){
+function check_push_buttons(){ // this function will have to be redone
   pushButtons.forEach(function(button){
-    if(document.getElementById(button).classList.contains("pressed")){
-      buttonStates[button] = 1;
-    } else {
-      buttonStates[button] = 0;
-    }
+    const btn = $(button);
+
+    // btn.mousedown(function() {
+    //   console.log("Button pressed");
+    //   buttonStates[button] = 1;
+    // });
+
+    // btn.mouseup(function() {
+    //   console.log("Button released");
+    //   buttonStates[button] = 0;
+    // });
   });
 }
+
+// pushButtons.forEach(function(button){
+  //   if(document.getElementById(button).classList.contains("pressed")){ // this is not working, the priciple is wrong
+  //     buttonStates[button] = 1;
+  //   } else {
+  //     buttonStates[button] = 0;
+  //   }
+  // });
 
 function get_user_inputs(){
   check_push_buttons();
@@ -205,6 +219,7 @@ function initial_checks(){
   update_button_styles(toggleButtons);
 } 
 
+// create event listeners for latch and toggle buttons
 function create_event_listeners(inputType, buttonType){
   buttonType.forEach(function(button){
     document.getElementById(button).addEventListener(inputType, function() {
@@ -216,9 +231,8 @@ function create_event_listeners(inputType, buttonType){
 initial_checks();
 create_event_listeners(settings["input type"], latchButtons);
 create_event_listeners(settings["input type"], toggleButtons);
-create_event_listeners(settings["input type"], pushButtons);
+
 
 document.getElementById("password").addEventListener(settings["input type"], function(){
   show_virtual_keyboard();
 });
-

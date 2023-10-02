@@ -1,5 +1,6 @@
 const feedbackButtons = [ // button sequence should match that of the incoming bits
-  "B-12",
+// first word
+  "B-12", // msb
   "B-13",
   "B-14",
   "B-15",
@@ -14,10 +15,11 @@ const feedbackButtons = [ // button sequence should match that of the incoming b
   "B-24",
   "B-25",
   "B-26",
-  "B-31",
-  "B-32",
+  "B-31", // lsb
+  // second word
+  "B-32", // msb
   "B-33",
   "B-34",
   "B-35",
-  "B-36" 
+  "B-36" // lsb
 ];
