@@ -171,19 +171,14 @@ function button_pressed_events(button){
   show_button_id(button); // remove later, used for developing purposes
 }
 
-function check_push_buttons(){ // this function will have to be redone
+function check_push_buttons(){
   pushButtons.forEach(function(button){
     const btn = $("#" + button);
 
-    // btn.mousedown(function() {
-    //   console.log("Button pressed");
-    //   buttonStates[button] = 1;
-    // });
-
-    // btn.mouseup(function() {
-    //   console.log("Button released");
-    //   buttonStates[button] = 0;
-    // });
+    if($("#" + button).data('clicked')){
+      buttonStates[button] = 1; 
+    }
+    else buttonStates[button] = 0; 
   });
 }
 
@@ -223,6 +218,7 @@ function create_event_listeners(inputType, buttonType){
 initial_checks();
 create_event_listeners(settings["input type"], latchButtons);
 create_event_listeners(settings["input type"], toggleButtons);
+create_event_listeners(settings["input type"], pushButtons); // remove later, only used for testing
 
 
 document.getElementById("password").addEventListener(settings["input type"], function(){
