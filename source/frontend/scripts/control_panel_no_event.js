@@ -163,9 +163,6 @@ function button_pressed_events(button){
     else if(latchButtons.includes(button)){
       buttonStates[button] = 1;
     }
-    else if(pushButtons.includes(button)){
-      buttonStates[button] = 1;
-    }
 
     button_special_logic(button); 
     update_button_styles(latchButtons);
@@ -174,13 +171,18 @@ function button_pressed_events(button){
   show_button_id(button); // remove later, used for developing purposes
 }
 
-// function is only called when latch or toggle button is pressed
-function push_button_released_events(button){
-  buttonStates[button] = 0;
+function check_push_buttons(){
+  pushButtons.forEach(function(button){
+    //var asd = $("#" + button);
+    if($("#" + button).data('clicked')){
+      buttonStates[button] = 1; 
+    }
+    else buttonStates[button] = 0; 
+  });
 }
 
 function get_user_inputs(){
-  // check_push_buttons();
+  check_push_buttons();
   var user_inputs = {type: "user inputs", data: []};
   Object.keys(buttonStates).forEach(function(button){
     user_inputs.data.push(buttonStates[button]);
@@ -209,22 +211,13 @@ function create_event_listeners(inputType, buttonType){
     document.getElementById(button).addEventListener(inputType, function() {
       button_pressed_events(this.id);
     });
-
-    if(pushButtons.includes(button)){
-      document.getElementById(button).addEventListener(settings["push release type"], function() { // when released
-        push_button_released_events(this.id);
-      });
-      document.getElementById(button).addEventListener(settings["push move type"], function() { // when moved off button while pressed
-        push_button_released_events(this.id);
-      });
-    }
   });
 } 
 
 initial_checks();
 create_event_listeners(settings["input type"], latchButtons);
 create_event_listeners(settings["input type"], toggleButtons);
-create_event_listeners(settings["input type"], pushButtons);
+create_event_listeners(settings["input type"], pushButtons); // remove later, only used for testing
 
 
 document.getElementById("password").addEventListener(settings["input type"], function(){
