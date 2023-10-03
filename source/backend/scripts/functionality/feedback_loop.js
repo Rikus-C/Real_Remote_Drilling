@@ -13,7 +13,7 @@ async function start_feedback_loop(){
   tcp_socket.forward(create_modbus_frame(frames["request feedback"]));
 }
 
-async function process_drive_feedback(data){ // [word, word, word]
+async function process_drive_feedback(data){ // [word, word]
   // format the drive feedback 
   var message = {};
   var new_data = [];
@@ -21,7 +21,7 @@ async function process_drive_feedback(data){ // [word, word, word]
   data.forEach(function(value){
     var binaryString = value.toString(2);
     var padding = "0".repeat(16 - binaryString.length);
-    new_data.push((padding + binaryString).split('').map(Number));
+    new_data.push((padding + binaryString).split("").map(Number));
   });
 
   message["type"] = "feedback";
@@ -36,7 +36,7 @@ async function process_drive_feedback(data){ // [word, word, word]
   tcp_socket.forward(create_modbus_frame(frames["request feedback"]));
 }
 
-start_feedback_loop();
+// start_feedback_loop();
 
 module.exports = {
   process_drive_feedback

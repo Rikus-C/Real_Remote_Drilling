@@ -4,7 +4,7 @@
   "plc port": 502,
   "plc connection type": "ipv4", 
   "websocket port": 3000,
-  "feedback wait": 50,
+  "feedback wait": 100,
   "input wait": 10,
-  "watchdog toggle wait": 1000
+  "watchdog toggle wait": 200
 }

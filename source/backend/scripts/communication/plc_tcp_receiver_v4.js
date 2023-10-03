@@ -11,11 +11,16 @@ client.connect(settings["plc port"], settings["plc ipv4"], function() {
   console.log("Connection to Drill Established using IPv4");
 });
 
-client.on("data", function(data){
+client.on("data", function(data){ 
   var modbus_frame = read_modbus_frame(data);
-  
   if(modbus_frame["transaction id"] === 1){
     process_drive_feedback(modbus_frame["data"]);
+  }
+  else if(modbus_frame["transaction id"] === 2){ // remove this if statement later, only used for debugging for now
+    console.log(data);
+  }
+  else if(modbus_frame["transaction id"] === 99){ // remove this if statement later, only used for debugging for now
+    console.log(data);
   }
 });
 

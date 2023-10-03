@@ -14,28 +14,29 @@ async function start_input_loop(){
 }
 
 async function proccess_user_inputs(inputs){
-  //console.log(inputs);
+  // console.log(inputs);
   var new_inputs = _.cloneDeep(frames["give inputs"]);
-  // console.log(frames["give inputs"]);
-
   var bit_counter = 0;
-  var word_value = "";
+  var byte_value = "";
+
   inputs.forEach(function(value){
-    word_value += value.toString();
+    byte_value += value.toString();
     bit_counter++;
-    if(bit_counter >= 16){
+    
+    if(bit_counter >= 8){
       bit_counter = 0;
-      while(word_value.length < 16){
-        word_value += "0";
+      while(byte_value.length < 8){
+        byte_value = "0" + byte_value;
       }
-      new_inputs.data.push(parseInt(word_value, 2));
-      //console.log(word_value);
-      word_value = "";
+      new_inputs.data.push(parseInt(byte_value, 2));
+      // console.log(byte_value);
+      byte_value = "";
     }
   });
-
+  new_inputs["length"] = new_inputs.data.length + 4;
+  // console.log("\n");
   tcp_socket.forward(create_modbus_frame(new_inputs));
-  console.log(new_inputs);
+  // console.log(new_inputs);
 
   await program_delay_timer(settings["input wait"]);
   websocket.forward({type: "request inputs"});

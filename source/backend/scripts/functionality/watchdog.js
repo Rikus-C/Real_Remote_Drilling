@@ -19,5 +19,5 @@ async function start_watchdog_timer(){
   }
 }
 
-start_watchdog_timer();
+// start_watchdog_timer();
 

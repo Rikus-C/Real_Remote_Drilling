@@ -93,4 +93,4 @@ function Assemble_CT_Modbus_Frame(Frame_Info)
   return new Uint8Array(Current_Frame);
 }
 
-console.log(Assemble_CT_Modbus_Frame(frames["Heartbeat_High"]));
+console.log(Assemble_CT_Modbus_Frame(frames["Send_Command_To_Drive"]));
