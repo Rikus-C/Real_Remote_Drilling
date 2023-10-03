@@ -106,7 +106,7 @@
     },
     "Send_Command_To_Drive": 
 	{
-        "Transaction_ID": 55,
+        "Transaction_ID": 2,
         "Protocol_ID": 0,
         "Length": 17,
         "Unit_ID": 1,
