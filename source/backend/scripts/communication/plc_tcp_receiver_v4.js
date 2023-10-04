@@ -16,12 +16,6 @@ client.on("data", function(data){
   if(modbus_frame["transaction id"] === 1){
     process_drive_feedback(modbus_frame["data"]);
   }
-  else if(modbus_frame["transaction id"] === 2){ // remove this if statement later, only used for debugging for now
-    console.log(data);
-  }
-  else if(modbus_frame["transaction id"] === 99){ // remove this if statement later, only used for debugging for now
-    console.log(data);
-  }
 });
 
 client.on("close", function() {});

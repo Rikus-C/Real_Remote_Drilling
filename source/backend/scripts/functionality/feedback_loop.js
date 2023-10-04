@@ -14,7 +14,6 @@ async function start_feedback_loop(){
 }
 
 async function process_drive_feedback(data){ // [word, word]
-  // format the drive feedback 
   var message = {};
   var new_data = [];
 
@@ -30,13 +29,11 @@ async function process_drive_feedback(data){ // [word, word]
   // send drive feedback to the hmi
   websocket.forward(message);
 
-  // console.log(message);
-
   await program_delay_timer(settings["feedback wait"]);
   tcp_socket.forward(create_modbus_frame(frames["request feedback"]));
 }
 
-// start_feedback_loop();
+start_feedback_loop();
 
 module.exports = {
   process_drive_feedback

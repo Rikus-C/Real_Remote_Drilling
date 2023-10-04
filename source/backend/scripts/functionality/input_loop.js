@@ -14,7 +14,6 @@ async function start_input_loop(){
 }
 
 async function proccess_user_inputs(inputs){
-  // console.log(inputs);
   var new_inputs = _.cloneDeep(frames["give inputs"]);
   var bit_counter = 0;
   var byte_value = "";
@@ -23,9 +22,9 @@ async function proccess_user_inputs(inputs){
     byte_value += value.toString();
     bit_counter++;
     
-    if(bit_counter >= 8){
+    if(bit_counter >= 16){
       bit_counter = 0;
-      while(byte_value.length < 8){
+      while(byte_value.length < 16){
         byte_value = "0" + byte_value;
       }
       new_inputs.data.push(parseInt(byte_value, 2));
@@ -33,10 +32,7 @@ async function proccess_user_inputs(inputs){
       byte_value = "";
     }
   });
-  new_inputs["length"] = new_inputs.data.length + 4;
-  // console.log("\n");
   tcp_socket.forward(create_modbus_frame(new_inputs));
-  // console.log(new_inputs);
 
   await program_delay_timer(settings["input wait"]);
   websocket.forward({type: "request inputs"});

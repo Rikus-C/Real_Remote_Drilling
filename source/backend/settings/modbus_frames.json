@@ -35,10 +35,12 @@
   "give inputs": {
     "transaction id": 2,
     "protocol id": 0,
-    "length": 0,
+    "length": 13,
     "unit code": 1,
     "function code": 16,
     "register": 7270,
+    "register count": 3,
+    "byte count": 6,
     "data": []
   }
 }

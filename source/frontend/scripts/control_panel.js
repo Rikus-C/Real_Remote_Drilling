@@ -146,10 +146,14 @@ function reset_panel(){
 }
 
 function button_pressed_pre_checks(button){
-  if(buttonStates["B-01"] === 1 || button === "B-05" ||
-  button === "B-01" || button === "B-49" || button === "B-50"){
-    return true;
-  } else return false;
+  if(button === "B-05") return true;
+  if(!buttonStates["B-05"]){
+    if(buttonStates["B-01"] || button === "B-01" || 
+    button === "B-49" || button === "B-50"){
+      return true;
+    } else return false;
+  } 
+  else return false; 
 }
 
 // function is only called when latch or toggle button is pressed
