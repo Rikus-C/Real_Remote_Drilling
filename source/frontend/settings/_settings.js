@@ -1,5 +1,5 @@
 var settings = {
-  "password": "",
+  "password": "B-01",
   "backend ip": "127.0.0.1",
   "backend port": "3000",
   "input type": "mousedown",

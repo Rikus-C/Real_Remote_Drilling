@@ -12,10 +12,18 @@ socket.addEventListener("message", function(msg) {
 
   if(message.type === "feedback"){
     show_feedback(message.data);
-  } else if (message.type === "request inputs"){
+  } 
+  else if (message.type === "request inputs"){
     socket.send(JSON.stringify(get_user_inputs()));
-  } else if (message.type === "message from frontend"){
-    show_alert_message(message.messageData);
+  } 
+  else if (message.type === "alert"){
+    show_alert_message(message.alert);
+  }
+  else if (message.type === "ping"){
+
+  }
+  else if (message.type === "stop"){
+    
   }
 });
 

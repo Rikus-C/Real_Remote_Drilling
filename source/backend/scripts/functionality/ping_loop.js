@@ -6,9 +6,8 @@ const wait_for_ready = require("./utilities.js").wait_for_ready;
 const program_delay_timer = require("./utilities.js").program_delay_timer;
 const alert_on_hmi = require("./utilities.js").alert_on_hmi;
 
-async function start_watchdog_timer(){
+async function start_ping_timer(){
   await wait_for_ready(tcp_socket);
-  alert_on_hmi("Watchdog has started");
 
   while(true){
     // send watchdog high signal
@@ -21,5 +20,4 @@ async function start_watchdog_timer(){
   }
 }
 
-start_watchdog_timer();
-
+start_ping_timer();

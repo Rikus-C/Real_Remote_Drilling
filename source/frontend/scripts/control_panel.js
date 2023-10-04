@@ -2,8 +2,14 @@ function show_button_id(button){ // remove later after testing
   document.getElementById("password").value = button;
 }
 
-function show_alert_message(msg){
-
+function show_alert_message(alert_message){
+  Swal.fire({
+    title: "Alert",
+    text: alert_message,
+    icon: "warning",
+    confirmButtonColor: "red",
+    confirmButtonText: "Confirm",
+  });
 }
 
 // called each time drive feedback is received
@@ -42,16 +48,18 @@ function turn_of_multiple(buttons){
 function exit_application(){
   Swal.fire({
     title: "Are you sure you want to exit?",
-    text: "Stop remote control on HMI first!",
+    text: "Remote Drilling Will be Stopped",
     icon: "warning",
     showCancelButton: true,
     confirmButtonColor: "red",
     cancelButtonText: "No",
     confirmButtonText: "Yes",
   }).then(function(result){
+    // lock the panel
+    button_pressed_events("B-02");
     if (result.isConfirmed) {
       socket.send(JSON.stringify({
-        Type: "Exit"
+        type: "exit"
       }));
     } 
   });
@@ -60,16 +68,19 @@ function exit_application(){
 function minimize_application(){
   Swal.fire({
     title: "Are you sure you want to minimize?",
-    text: "Stop remote control on HMI first!",
+    text: "Rod Loader and Drive will be Stopped",
     icon: "info",
     showCancelButton: true,
     confirmButtonColor: "green",
     cancelButtonText: "No",
     confirmButtonText: "Yes",
   }).then(function(result){
+    // stop rod loader and drive
+    button_pressed_events("B-11");
+    button_pressed_events("B-19");
     if (result.isConfirmed) {
       socket.send(JSON.stringify({
-        Type: "Minimize"
+        type: "minimize"
       }));
     }
   });

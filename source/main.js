@@ -1,4 +1,5 @@
 const settings = require("./backend/settings/comms_settings.json");
+const get_app_api = require("./backend/scripts/functionality/utilities.js").get_app_api;
 
 if (settings["plc connection type"] === "ipv4"){
   require("./backend/scripts/communication/plc_tcp_receiver_v4.js");
@@ -9,6 +10,7 @@ else if (settings["plc connection type"] === "ipv6"){
 
 require("./backend/scripts/communication/websocket_receiver.js");
 require("./backend/scripts/functionality/watchdog.js");
+require("./backend/scripts/functionality/ping_loop.js");
 require("./backend/scripts/functionality/input_loop.js");
 require("./backend/scripts/functionality/feedback_loop.js");
 
@@ -26,6 +28,8 @@ function createWindow() {
   });
 
   win.loadFile("./frontend/panel.html");
+
+  get_app_api(app, win);
 }
 
 app.whenReady().then(createWindow);
@@ -41,3 +45,5 @@ app.on("activate", () => {
     createWindow();
   }
 });
+
+
