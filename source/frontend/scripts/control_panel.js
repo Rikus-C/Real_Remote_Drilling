@@ -118,6 +118,13 @@ function unlock_panel(){
     buttonStates["B-01"] = 0;
     buttonStates["B-02"] = 1;
   } 
+  else{
+    if(settings["password input toggles control"]){
+      socket.send(JSON.stringify({
+        type: "turn on control"
+      }));
+    }
+  }
 }
 
 // special button press cases
@@ -150,6 +157,12 @@ function reset_panel(){
   buttonStates["B-11"] = 1;
   buttonStates["B-39"] = 0;
   buttonStates["B-40"] = 0;
+
+  if(settings["password input toggles control"]){
+    socket.send(JSON.stringify({
+      type: "turn off control"
+    }));
+  }
 
   button_special_logic("B-06");
   update_button_styles(latchButtons);

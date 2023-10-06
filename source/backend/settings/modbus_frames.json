@@ -32,6 +32,28 @@
       2
     ]
   },
+  "start control": {
+    "transaction id": 3,
+    "protocol id": 0,
+    "length": 6,
+    "unit code": 1,
+    "function code": 6,
+    "register": 7269,
+    "data": [
+      65535
+    ]
+  },
+  "stop control": {
+    "transaction id": 3,
+    "protocol id": 0,
+    "length": 6,
+    "unit code": 1,
+    "function code": 6,
+    "register": 7269,
+    "data": [
+      0
+    ]
+  },
   "give inputs": {
     "transaction id": 2,
     "protocol id": 0,

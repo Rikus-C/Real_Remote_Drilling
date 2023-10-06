@@ -1,4 +1,7 @@
+const frames = require("../../settings/modbus_frames.json");
 const websocket = require("../communication/websocket_sender.js").websocket;
+const tcp_socket = require("../communication/plc_tcp_sender.js").tcp_socket;
+const create_modbus_frame = require("../functionality/modbus.js").create_modbus_frame;
 
 var app_api;
 var win_api;
@@ -32,7 +35,17 @@ function alert_on_hmi(messageInfo){
   });
 }
 
+function turn_on_remote_control(){
+  tcp_socket.forward(create_modbus_frame(frames["start control"]));
+}
+
+function turn_off_remote_control(){
+  tcp_socket.forward(create_modbus_frame(frames["stop control"]));
+}
+
 module.exports = {
+  turn_off_remote_control,
+  turn_on_remote_control,
   minimize_application,
   program_delay_timer, 
   exit_application,

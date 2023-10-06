@@ -5,4 +5,5 @@ var settings = {
   "input type": "mousedown",
   "push release type": "mouseup",
   "push move type": "mouseout",
+  "password input toggles control": true
 };
