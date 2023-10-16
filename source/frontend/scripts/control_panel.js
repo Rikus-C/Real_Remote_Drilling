@@ -23,11 +23,14 @@ function show_alert_message(alert_message, alert_type){
   }
 
   Swal.fire({
+    position: "top",
     title: "Alert",
     text: alert_message,
     icon: alert_type,
-    confirmButtonColor: color,
-    confirmButtonText: "Confirm",
+    showConfirmButton: false,
+    timer: 2000
+    //confirmButtonColor: color,
+    //confirmButtonText: "Confirm",
   });
 }
 
@@ -95,17 +98,25 @@ function exit_application(){
     text: "Remote Drilling Will be Stopped",
     icon: "warning",
     showCancelButton: true,
+    showCloseButton: true,
+    cancelButtonColor: "orange",
     confirmButtonColor: "red",
-    cancelButtonText: "No",
-    confirmButtonText: "Yes",
+    cancelButtonText: "Relaod",
+    confirmButtonText: "Exit",
   }).then(function(result){
     // lock the panel
-    button_pressed_events("B-02");
     if (result.isConfirmed) {
+      button_pressed_events("B-02");
       socket.send(JSON.stringify({
         type: "exit"
       }));
-    } 
+    }
+    else if(result.dismiss === Swal.DismissReason.cancel){
+      button_pressed_events("B-02");
+      socket.send(JSON.stringify({
+        type: "restart"
+      }));
+    }
   });
 }
 
@@ -162,12 +173,10 @@ function unlock_panel(){
     buttonStates["B-01"] = 0;
     buttonStates["B-02"] = 1;
   } 
-  else{
-    if(settings["password input toggles control"]){
-      socket.send(JSON.stringify({
-        type: "turn on control"
-      }));
-    }
+  else if(settings["password input toggles control"]){
+    socket.send(JSON.stringify({
+      type: "turn on control"
+    }));
   }
 }
 
