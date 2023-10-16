@@ -2,13 +2,57 @@ function show_button_id(button){ // remove later after testing
   document.getElementById("password").value = button;
 }
 
-function show_alert_message(alert_message){
+function show_connection_delay(ping){ // remove later after testing
+  document.getElementById("password").value = "delay (ms): " + ping;
+}
+
+function show_alert_message(alert_message, alert_type){
+  var color;
+
+  if(alert_type === "info"){
+    color = "blue";
+  }
+  else if(alert_type === "success"){
+    color = "green";
+  }
+  else if(alert_type === "warning"){
+    color = "orange";
+  }
+  else if(alert_type === "error"){
+    color = "red";
+  }
+
   Swal.fire({
     title: "Alert",
     text: alert_message,
-    icon: "warning",
-    confirmButtonColor: "red",
+    icon: alert_type,
+    confirmButtonColor: color,
     confirmButtonText: "Confirm",
+  });
+}
+
+function show_comms_failure_message(){
+  Swal.fire({
+    title: "PLC Communication Failure",
+    text: "Connection to Machine Lost",
+    icon: "error",
+    showCancelButton: true,
+    confirmButtonColor: "orange",
+    cancelButtonColor: "red",
+    confirmButtonText: "Restart",
+    cancelButtonText: "Exit",
+    allowOutsideClick: false
+  }).then((result) => {
+    if (result.isConfirmed) {
+      socket.send(JSON.stringify({
+        type: "restart"
+      }));
+    }
+    else if(result.dismiss === Swal.DismissReason.cancel){
+      socket.send(JSON.stringify({
+        type: "exit"
+      }));
+    }
   });
 }
 

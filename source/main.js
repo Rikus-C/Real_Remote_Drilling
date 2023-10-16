@@ -13,6 +13,7 @@ require("./backend/scripts/functionality/watchdog.js");
 require("./backend/scripts/functionality/ping_loop.js");
 require("./backend/scripts/functionality/input_loop.js");
 require("./backend/scripts/functionality/feedback_loop.js");
+require("./backend/scripts/functionality/startup_connection");
 
 const {app, BrowserWindow} = require("electron");
 
@@ -20,8 +21,8 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 500,
     height: 500,
-    fullscreen: false,
-    frame: true,
+    fullscreen: true,
+    frame: false,
     webPreferences: {
       nodeIntegration: true,
     },

@@ -1,6 +1,17 @@
 {
-  "watchdog high": {
+  "ping plc": {
     "transaction id": 99,
+    "protocol id": 0,
+    "length": 6,
+    "unit code": 1,
+    "function code": 3,
+    "register": 7274,
+    "data": [
+      1
+    ]
+  },
+  "watchdog high": {
+    "transaction id": 0,
     "protocol id": 0,
     "length": 6,
     "unit code": 1,
@@ -11,7 +22,7 @@
     ]
   },
   "watchdog low": {
-    "transaction id": 99,
+    "transaction id": 0,
     "protocol id": 0,
     "length": 6,
     "unit code": 1,
@@ -38,7 +49,7 @@
     "length": 6,
     "unit code": 1,
     "function code": 6,
-    "register": 7269,
+    "register": 7270,
     "data": [
       65535
     ]
@@ -49,7 +60,7 @@
     "length": 6,
     "unit code": 1,
     "function code": 6,
-    "register": 7269,
+    "register": 7270,
     "data": [
       0
     ]
@@ -60,7 +71,7 @@
     "length": 13,
     "unit code": 1,
     "function code": 16,
-    "register": 7270,
+    "register": 7271,
     "register count": 3,
     "byte count": 6,
     "data": []

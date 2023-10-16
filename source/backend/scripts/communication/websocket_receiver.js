@@ -4,6 +4,7 @@ const initiate_websocket_sender = require("./websocket_sender.js").initiate_webs
 const proccess_user_inputs = require("../functionality/input_loop.js").proccess_user_inputs;
 const exit_application = require("../functionality/utilities.js").exit_application;
 const minimize_application = require("../functionality/utilities.js").minimize_application;
+const restart_application = require("../functionality/utilities.js").restart_application;
 const turn_on_remote_control = require("../functionality/utilities.js").turn_on_remote_control;
 const turn_off_remote_control = require("../functionality/utilities.js").turn_off_remote_control;
 
@@ -20,6 +21,9 @@ wss.on("connection", function(ws){
     } 
     else if(message.type === "exit"){
       exit_application();
+    } 
+    else if(message.type === "restart"){
+      restart_application();
     } 
     else if(message.type === "minimize"){
       minimize_application();

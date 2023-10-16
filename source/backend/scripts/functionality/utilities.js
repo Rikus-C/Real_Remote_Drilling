@@ -15,6 +15,11 @@ function exit_application(){
   app_api.quit();
 }
 
+function restart_application(){
+  app_api.relaunch();
+  app_api.quit();
+}
+
 function minimize_application(){
   win_api.minimize();
 }
@@ -28,10 +33,11 @@ async function wait_for_ready(condition) {
     await new Promise(resolve => setTimeout(resolve, 10));
 }
 
-function alert_on_hmi(messageInfo){
+function alert_on_hmi(messageInfo, varient){
   websocket.forward({
     type: "alert",
-    alert: messageInfo
+    alert: messageInfo,
+    varient: varient
   });
 }
 
@@ -47,6 +53,7 @@ module.exports = {
   turn_off_remote_control,
   turn_on_remote_control,
   minimize_application,
+  restart_application,
   program_delay_timer, 
   exit_application,
   wait_for_ready,

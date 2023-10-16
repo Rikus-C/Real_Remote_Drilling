@@ -24,7 +24,7 @@ function word_to_decimal(wordValue) {
 }
 
 function create_modbus_frame(frame_info){
-  console.log(frame_info);
+  // console.log(frame_info);
   var frame = [];
   frame.push(to_word(frame_info["transaction id"]));
   frame.push(to_word(frame_info["protocol id"]));
@@ -41,8 +41,8 @@ function create_modbus_frame(frame_info){
   frame_info["data"].forEach(function(value){
     frame.push(to_word(value));
   });
-  console.log(frame_info["data"]);
-  console.log(to_1D_list(frame));
+  // console.log(frame_info["data"]);
+  // console.log(to_1D_list(frame));
   return Buffer.from(to_1D_list(frame));
 }
 

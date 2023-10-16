@@ -17,13 +17,16 @@ socket.addEventListener("message", function(msg) {
     socket.send(JSON.stringify(get_user_inputs()));
   } 
   else if (message.type === "alert"){
-    show_alert_message(message.alert);
+    show_alert_message(message.alert, message.varient);
   }
   else if (message.type === "ping"){
-
+    show_connection_delay(message.data);
   }
   else if (message.type === "stop"){
     
+  }
+  else if (message.type === "disconnect"){
+    show_comms_failure_message()
   }
 });
 
