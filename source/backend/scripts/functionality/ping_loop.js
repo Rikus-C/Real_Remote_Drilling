@@ -28,7 +28,7 @@ async function start_ping_timer(){
     clearTimeout(conn_failed);
     ping_received_time = new Date();
 
-    var ping_value = ping_received_time - ping_send_time;
+    var ping_value = ping_received_time - ping_send_time; 
     websocket.forward({type: "ping", data: ping_value});
     await program_delay_timer(settings["plc ping delay"]);
   }
