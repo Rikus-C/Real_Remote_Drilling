@@ -4,7 +4,7 @@ import ping3
 
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
-from collections import dequecd
+from collections import deque
 
 def ping_ipv4_address(ip_address):  
   return ping3.ping(ip_address)

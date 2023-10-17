@@ -19,17 +19,15 @@ const {app, BrowserWindow} = require("electron");
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 500,
-    height: 500,
+    // width: 500,
+    // height: 500,
     fullscreen: true,
     frame: false,
     webPreferences: {
       nodeIntegration: true,
     },
   });
-
   win.loadFile("./frontend/panel.html");
-
   get_app_api(app, win);
 }
 
